@@ -24,7 +24,7 @@ static int register_expense_record(string file_name, string car_model, string ex
 
  if (!int.TryParse(FileRead(), out expense))
  {
-  File.Write("Please use an integer");
+  FileWrite("Please use an integer");
   return -1;
    }
  }
@@ -63,7 +63,7 @@ if (!int.TryParse(File.Read(), out line_number_to_edit)) {
  return -1;
  }
 
-File.Write("What is model of the car?");
+FileWrite("What is model of the car?");
 car_model = Console.WriteLine();
  FileWrite("What is the expense date?");
  expense_date = Console.WriteLine();
