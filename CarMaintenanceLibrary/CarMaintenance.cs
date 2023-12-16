@@ -47,4 +47,56 @@ public class CarMaintenance {
 
             return 0;
         }
-        
+            /**
+ * @brief This function edit records to expense_logging_records.bin.
+ *
+ *
+ * @return 0 on success.
+ * @return -1 on fail.
+ */
+            static int edit_expense_record(string file_name,int line_number_to_edit, string car_model, string expense_date, string expense_type, int expense)
+            {
+                string record;
+
+                if (car_model == "None" && expense_date == "None" && expense == 1 && expense_type == "None")
+                {
+                    Console.WriteLine("Which line do you want to edit?")
+                    line_number_to_edit = int.Parse(Console.Readline());
+                    if (!int.TryParse(Console.ReadLine(), out line_number_to_edit))
+                    {
+                        Console.WriteLine("Please use an integer");
+                        return -1;
+                    }
+
+                    Console.WriteLine("What is model of the car?");
+                    car_model = Console.Readline();
+                    Console.WriteLine("What is the expense date?");
+                    expense_date = Console.Readline();
+                    Console.WriteLine("What is the expense type?");
+                    expense_type = Console.Readline();
+                    cout << ("What is the expense cost?");
+                    cin >> expense;
+
+                    if (!int.TryParse(Console.ReadLine(), out expense))
+                    {
+                        Console.WriteLine("Please use an integer");
+                        return -1;
+                    }
+                }
+
+                record = $"{car_model}    {expense_date}   {expense_type}    {expense}";
+                using (StreamWriter myFile = new StreamWriter(file_name, true))
+                {
+                    if (FileEdit(file_name, line_number_to_edit, record) == 0)
+                    {
+                       
+                        return 0;
+                    }
+                    else
+                    {
+                        return -1;
+                    }
+
+                    
+                }
+
