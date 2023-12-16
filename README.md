@@ -1,3 +1,9 @@
+/**
+ * @file README.md
+ *
+ * @brief readme file
+ */
+
 ### Functionalities
 In menu, user can see, register, update, delete a record he wants. Crop records and livestock records are contained separately which makes updating and following these records easy. If update function chosen from menu user can change any line he wants with ease even there is a million records. Same thing goes for delete function as well, user can delete a specified line or whole record if he/she wants. There is also a User Authentication system, nobody without correct username and password can access these records.
 These records contains information as below:

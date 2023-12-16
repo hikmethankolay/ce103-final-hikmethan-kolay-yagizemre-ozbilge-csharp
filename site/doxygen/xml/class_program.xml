@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_program" kind="class" language="C#" prot="package">
+    <compoundname>Program</compoundname>
+      <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="class_program_1ada72f8d1518f89bc2e6ad807d5059564" prot="private" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Program.Main</definition>
+        <argsstring>(string[] args)</argsstring>
+        <name>Main</name>
+        <qualifiedname>Program.Main</qualifiedname>
+        <param>
+          <type>string[]</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Function for main app. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CarMaintenanceApp/Program.cs" line="11" column="23" bodyfile="CarMaintenanceApp/Program.cs" bodystart="11" bodyend="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="CarMaintenanceApp/Program.cs" line="6" column="9" bodyfile="CarMaintenanceApp/Program.cs" bodystart="6" bodyend="14"/>
+    <listofallmembers>
+      <member refid="class_program_1ada72f8d1518f89bc2e6ad807d5059564" prot="private" virt="non-virtual"><scope>Program</scope><name>Main</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

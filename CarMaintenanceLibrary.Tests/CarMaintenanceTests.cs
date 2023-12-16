@@ -1,6 +1,101 @@
 
 namespace CarMaintenanceLibrary.Tests {
-public class CarMaintenanceTests {
+    public class CarMaintenanceTests
+    {
+        private string? testString;
+        private const int fail = -1;
 
-}
+        [Fact]
+        public void TestFileRead()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)TEXT STRING0\n1-)TEXT STRING1\n2-)TEXT STRING2\n3-)TEXT STRING3\n4-)TEXT STRING4\n";
+            Assert.Equal(testString, car.FileRead("test1.bin"));
+        }
+
+        [Fact]
+        public void TestFileAppend()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)TEXT STRING0\n1-)TEXT STRING1\n2-)TEXT STRING2\n3-)TEXT STRING3\n4-)TEXT STRING4\n5-)TEXT STRING5\n";
+            string appendString = "TEXT STRING5";
+            car.FileAppend("test2.bin", appendString);
+            Assert.Equal(testString, car.FileRead("test2.bin"));
+        }
+
+        [Fact]
+        public void TestFileEdit()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)TEXT STRING0\n1-)TEXT STRING1\n2-)TEXT STRING2\n3-)TEXT STRING EDIT\n4-)TEXT STRING4\n";
+            string editString = "TEXT STRING EDIT";
+            car.FileEdit("test3.bin", 3, editString);
+            Assert.Equal(testString, car.FileRead("test3.bin"));
+        }
+
+        [Fact]
+        public void TestFileDelete()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)TEXT STRING0\n1-)TEXT STRING2\n2-)TEXT STRING3\n3-)TEXT STRING4\n";
+            car.FileLineDelete("test4.bin", 1);
+            Assert.Equal(testString, car.FileRead("test4.bin"));
+        }
+
+        [Fact]
+        public void TestFileWrite()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)TEXT STRING WRITE\n";
+            string writeString = "TEXT STRING WRITE";
+            car.FileWrite("test5.bin", writeString);
+            Assert.Equal(testString, car.FileRead("test5.bin"));
+        }
+
+        [Fact]
+        public void TestFileReadFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal("-1", car.FileRead("test1f.bin"));
+        }
+
+        [Fact]
+        public void TestFileAppendFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            string appendString = "TEXT STRING5";
+            Assert.Equal(fail, car.FileAppend("test2f.bin", appendString));
+        }
+
+        [Fact]
+        public void TestFileEditFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            string editString = "TEXT STRING EDIT";
+            Assert.Equal(fail, car.FileEdit("test3f.bin", 3, editString));
+        }
+
+        [Fact]
+        public void TestFileEditFail_2()
+        {
+            CarMaintenance car = new CarMaintenance();
+            string editString = "TEXT STRING EDIT";
+            Assert.Equal(fail, car.FileEdit("test3.bin", 100, editString));
+        }
+
+        [Fact]
+        public void TestFileDeleteFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.FileLineDelete("test4f.bin", 2));
+        }
+
+        [Fact]
+        public void TestFileDeleteFail_2()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.FileLineDelete("test4.bin", 100));
+        }
+
+    }
 }

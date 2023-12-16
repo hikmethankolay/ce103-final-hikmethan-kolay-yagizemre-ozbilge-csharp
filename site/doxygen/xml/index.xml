@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.7" xml:lang="en-US">
+  <compound refid="class_car_maintenance_library_1_1_car_maintenance" kind="class"><name>CarMaintenanceLibrary::CarMaintenance</name>
+    <member refid="class_car_maintenance_library_1_1_car_maintenance_1aadfaf4948aef41a4c2f6127a55f57ed9" kind="variable"><name>myFile</name></member>
+    <member refid="class_car_maintenance_library_1_1_car_maintenance_1aadb32d8fec5955a917b7a5fbc11870ca" kind="function"><name>FileWrite</name></member>
+    <member refid="class_car_maintenance_library_1_1_car_maintenance_1aa258d1de425fd824af2489c87dfadbba" kind="function"><name>FileRead</name></member>
+    <member refid="class_car_maintenance_library_1_1_car_maintenance_1a9fcc76ad526bc3cb2f48beb6c5240f9c" kind="function"><name>FileAppend</name></member>
+    <member refid="class_car_maintenance_library_1_1_car_maintenance_1a0057cdd5f861e2481dd7954b4f277817" kind="function"><name>FileEdit</name></member>
+    <member refid="class_car_maintenance_library_1_1_car_maintenance_1ac939d0b1360c44a559c584bdef160d4b" kind="function"><name>FileLineDelete</name></member>
+  </compound>
+  <compound refid="class_program" kind="class"><name>Program</name>
+    <member refid="class_program_1ada72f8d1518f89bc2e6ad807d5059564" kind="function"><name>Main</name></member>
+  </compound>
+  <compound refid="namespace_car_maintenance_library" kind="namespace"><name>CarMaintenanceLibrary</name>
+  </compound>
+  <compound refid="namespace_system_1_1_text" kind="namespace"><name>System::Text</name>
+  </compound>
+  <compound refid="_program_8cs" kind="file"><name>Program.cs</name>
+  </compound>
+  <compound refid="_car_maintenance_8cs" kind="file"><name>CarMaintenance.cs</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="dir_cb96a243f700fb98694edd35ffd97f22" kind="dir"><name>CarMaintenanceApp</name>
+  </compound>
+  <compound refid="dir_0d2fb01da58e50595b3d4412e9ef356e" kind="dir"><name>CarMaintenanceLibrary</name>
+  </compound>
+  <compound refid="indexpage" kind="page"><name>index</name>
+  </compound>
+</doxygenindex>
