@@ -42,7 +42,7 @@ public class CarMaintenance {
 }
 
  /**
- * @brief This function register records to expense_logging_records.bin.
+ * @brief This function edit records to expense_logging_records.bin.
  *
  *
  * @return 0 on success.
@@ -81,6 +81,35 @@ public class CarMaintenance {
             return -1;
         }
  }
+/**
+ * @brief This function delete records to expense_logging_records.bin.
+ *
+ *
+ * @return 0 on success.
+ * @return -1 on fail.
+ */
+  static int DeleteExpenseRecord(string fileName, int linenumbertoDelete)
+  {
+        if(linenumbertoDelete == 0)
+        {
+            Console.WriteLine("Which do you want to delete?");
+            linenumbertoDelete = int.Parse(Console.ReadLine());
+
+            if(int.TryParse(Console.ReadLine(), out linenumbertoDelete))
+            {
+               Console.WriteLine("Please use an integer");
+                return -1;
+            }
+        }
+
+        if(FileLineDelete(fileName, linenumbertoDelete) == 0) 
+        {
+            return 0;
+        } else {
+            return -1;
+
+        }
+  }
 
 
 
