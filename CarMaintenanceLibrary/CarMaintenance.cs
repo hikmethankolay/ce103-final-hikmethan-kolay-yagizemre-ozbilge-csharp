@@ -9,8 +9,6 @@
 *
 */
 namespace CarMaintenanceLibrary {
-/// \brief A class for performing basic arithmetic operations.
-public class CarMaintenance {
     /**
     * 
     *@brief Imports Text Class from System Namespace for file operations.
@@ -27,7 +25,7 @@ public class CarMaintenance {
          * Open a FileStream object named myFile.
          *
          */
-        private  FileStream? myFile; // FileStream object for file operations
+        private FileStream? myFile; // FileStream object for file operations
 
         /**
          * Opens a binary file, deletes all of its content, and writes given text to it.
@@ -307,14 +305,86 @@ public class CarMaintenance {
                 return -1;
             }
         }
-/**
+        /**
+        * @brief This function is for user register
+        *
+        * Function creates a user.bin file and writes inputted username and password in it.
+        *
+        * @return 0 on success.
+        * @return -1 on faill.
+        */
+        public int user_register(string new_username = "None", string new_password = "None", string new_recovery_key = "None", string user_file = "user.bin", string choice = "None")
+        {
+            return 0;
+        }
+
+        /**
+         * @brief This function is for user login
+         *
+         * Function read user.bin file and checks if username and password matchs with inputted username and password
+         *
+         * @return 0 on success.
+         * @return -1 on fail.
+         */
+        public int user_login(string username = "None", string password = "None", string user_file = "user.bin")
+        {
+            return 0;
+        }
+
+        /**
+         * @brief This function changes password of user.
+         *
+         *
+         * @return 0 on success.
+         * @return -1 on fail.
+         */
+        public int user_change_password(string recovery_key = "None", string new_password = "None", string user_file = "user.bin")
+        {
+            return 0;
+        }
+        /**
+        * @brief This function register records to service_history_records.bin.
+        *
+        *
+        * @return 0 on success.
+        * @return -1 on fail.
+        */
+        public int register_service_history_record(string file_name = "service_history_records.bin", string vehicle_model = "None", int service_km = 1, string service_provider = "None", int service_cost = 1)
+        {
+            return 0;
+        }
+
+        /**
+         * @brief This function edit the records in service_history_records.bin.
+         *
+         *
+         * @return 0 on success.
+         * @return -1 on fail.
+         */
+        public int edit_service_history_record(string file_name = "service_history_records.bin", int line_number_to_edit = 0, string vehicle_model = "None", int service_km = 1, string service_provider = "None",int service_cost = 1)
+        {
+            return 0;
+        }
+
+        /**
+         * @brief This function delete the records in service_history_records.bin.
+         *
+         *
+         * @return 0 on success.
+         * @return -1 on fail.
+         */
+        public int delete_service_history_record(string file_name = "service_history_records.bin", int line_number_to_delete = 0)
+        {
+            return 0;
+        }
+        /**
         * @brief This function register records to expense_logging_records.bin.
         *
         *
         * @return 0 on success.
         * @return -1 on fail.
         */
-        public int RegisterExpsenseRecord(string fileName, string carModel, string expenseDate, string expenseType, int expense) {
+        public int RegisterExpsenseRecord(string fileName = "expense_logging_records.bin", string carModel = "None", string expenseDate = "None", string expenseType = "None", int expense = 1) {
             string record;
 
             if (carModel == "None" && expenseDate == "None" && expense == 1 && expenseType == "None")
@@ -343,14 +413,14 @@ public class CarMaintenance {
                 return -1;
             }
         }
-/**
+        /**
         * @brief This function edit records to expense_logging_records.bin.
         *
         *
         * @return 0 on success.
         * @return -1 on fail.
-        */
-        public int EditExpsenseRecord(string filename, int lineNumbertoEdit, string carModel, string expenseDate, string expenseType, int expense)
+         */
+        public int EditExpsenseRecord(string fileName = "expense_logging_records.bin", int lineNumbertoEdit = 0, string carModel = "None", string expenseDate = "None", string expenseType = "None", int expense = 1)
         {
             string record;
 
@@ -377,20 +447,20 @@ public class CarMaintenance {
 
             record = $"{carModel} {expenseDate} {expenseType} {expense} ";
 
-            if (FileEdit(filename, lineNumbertoEdit, record) == 0) {
+            if (FileEdit(fileName, lineNumbertoEdit, record) == 0) {
                 return 0;
             } else {
                 return -1;
             }
         }
-/**
-         * @brief This function delete records to expense_logging_records.bin.
-         *
-         *
-         * @return 0 on success.
-         * @return -1 on fail.
-         */
-        public int DeleteExpenseRecord(string fileName, int lineNumbertoDelete)
+        /**
+        * @brief This function delete records to expense_logging_records.bin.
+        *
+        *
+        * @return 0 on success.
+        * @return -1 on fail.
+        */
+        public int DeleteExpenseRecord(string fileName = "expense_logging_records.bin", int lineNumbertoDelete = 0)
         {
             if (lineNumbertoDelete == 0)
             {
@@ -412,4 +482,75 @@ public class CarMaintenance {
 
             }
         }
+        /**
+        * @brief This function register records to maintenance_reminder_records.bin.
+        *
+        *
+        * @return 0 on success.
+        * @return -1 on fail.
+        */
+        public int register_maintenance_reminder_record(string file_name = "maintenance_reminder_records.bin", string vehicle_model = "None", int service_km = 1, string service_type = "None")
+        {
+            return 0;
+        }
+
+        /**
+         * @brief This function edit the records in maintenance_reminder_records.bin.
+         *
+         *
+         * @return 0 on success.
+         * @return -1 on fail.
+         */
+        public int edit_maintenance_reminder_record(string file_name = "maintenance_reminder_records.bin", int line_number_to_edit = 0, string vehicle_model = "None", int service_km = 1,string service_type = "None")
+        {
+            return 0;
+        }
+
+        /**
+         * @brief This function delete the records in maintenance_reminder_records.bin.
+         *
+         *
+         * @return 0 on success.
+         * @return -1 on fail.
+         */
+        public int delete_maintenance_reminder_record(string file_name = "maintenance_reminder_records.bin", int line_number_to_delete = 0)
+        {
+            return 0;
+        }
+        /**
+        * @brief This function register records to fuel_efficiency_records.bin.
+        *
+        *
+        * @return 0 on success.
+        * @return -1 on fail.
+*/
+        public int register_fuel_efficiency_record(string file_name = "fuel_efficiency_records.bin", string car_model = "None", float fuel_consumed = 1.0f, float road_traveled = 1.0f)
+        {
+            return 0;
+        }
+
+        /**
+        * @brief This function edit the records in fuel_efficiency_records.bin.
+        *
+        *
+        * @return 0 on success.
+        * @return -1 on fail.
+*/
+        public int edit_fuel_efficiency_record(string file_name = "fuel_efficiency_records.bin", int line_number_to_edit = 0, string car_model = "None", float fuel_consumed = 1.0f, float road_traveled = 1.0f)
+        {
+            return 0;
+        }
+
+        /**
+        * @brief This function delete the records in fuel_efficiency_records.bin.
+        *
+        *
+        * @return 0 on success.
+        * @return -1 on fail.
+*/
+        public int delete_fuel_efficiency_record(string file_name = "fuel_efficiency_records.bin", int line_number_to_delete = 0)
+        {
+            return 0;
+        }
     }
+}
