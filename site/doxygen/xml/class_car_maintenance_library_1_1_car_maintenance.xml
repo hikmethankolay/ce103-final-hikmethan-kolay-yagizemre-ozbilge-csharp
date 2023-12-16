@@ -1,0 +1,254 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="class_car_maintenance_library_1_1_car_maintenance" kind="class" language="C#" prot="public">
+    <compoundname>CarMaintenanceLibrary::CarMaintenance</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_car_maintenance_library_1_1_car_maintenance_1aadfaf4948aef41a4c2f6127a55f57ed9" prot="private" static="no" mutable="no">
+        <type>FileStream?</type>
+        <definition>FileStream? CarMaintenanceLibrary.CarMaintenance.myFile</definition>
+        <argsstring></argsstring>
+        <name>myFile</name>
+        <qualifiedname>CarMaintenanceLibrary.CarMaintenance.myFile</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Open a FileStream object named myFile. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CarMaintenanceLibrary/CarMaintenance.cs" line="28" column="29" bodyfile="CarMaintenanceLibrary/CarMaintenance.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_car_maintenance_library_1_1_car_maintenance_1aadb32d8fec5955a917b7a5fbc11870ca" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int CarMaintenanceLibrary.CarMaintenance.FileWrite</definition>
+        <argsstring>(string FileName, string text)</argsstring>
+        <name>FileWrite</name>
+        <qualifiedname>CarMaintenanceLibrary.CarMaintenance.FileWrite</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>FileName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Opens a binary file, deletes all of its content, and writes given text to it.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to write. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to write. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CarMaintenanceLibrary/CarMaintenance.cs" line="37" column="20" bodyfile="CarMaintenanceLibrary/CarMaintenance.cs" bodystart="37" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_car_maintenance_library_1_1_car_maintenance_1aa258d1de425fd824af2489c87dfadbba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string CarMaintenanceLibrary.CarMaintenance.FileRead</definition>
+        <argsstring>(string FileName)</argsstring>
+        <name>FileRead</name>
+        <qualifiedname>CarMaintenanceLibrary.CarMaintenance.FileRead</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>FileName</declname>
+        </param>
+        <briefdescription>
+<para>Opens a binary file, Reads all of its content, seperate line with &quot;\n&quot; and write them to console, also returns a string for unit tests. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to read from. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The contents of the file as a string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CarMaintenanceLibrary/CarMaintenance.cs" line="57" column="23" bodyfile="CarMaintenanceLibrary/CarMaintenance.cs" bodystart="57" bodyend="91"/>
+      </memberdef>
+      <memberdef kind="function" id="class_car_maintenance_library_1_1_car_maintenance_1a9fcc76ad526bc3cb2f48beb6c5240f9c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int CarMaintenanceLibrary.CarMaintenance.FileAppend</definition>
+        <argsstring>(string FileName, string text)</argsstring>
+        <name>FileAppend</name>
+        <qualifiedname>CarMaintenanceLibrary.CarMaintenance.FileAppend</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>FileName</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Appends given text to a binary file with a automatic calculated line number. Calcultes new lines line number by finding last lines line number. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to append to. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The text to append to the file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CarMaintenanceLibrary/CarMaintenance.cs" line="100" column="20" bodyfile="CarMaintenanceLibrary/CarMaintenance.cs" bodystart="100" bodyend="148"/>
+      </memberdef>
+      <memberdef kind="function" id="class_car_maintenance_library_1_1_car_maintenance_1a0057cdd5f861e2481dd7954b4f277817" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int CarMaintenanceLibrary.CarMaintenance.FileEdit</definition>
+        <argsstring>(string fileName, int lineNumberToEdit, string newLine)</argsstring>
+        <name>FileEdit</name>
+        <qualifiedname>CarMaintenanceLibrary.CarMaintenance.FileEdit</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>lineNumberToEdit</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>newLine</declname>
+        </param>
+        <briefdescription>
+<para>This function Opens a binary file, finds the line that user wants to edit and replace it wih new text. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to edit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_number_to_edit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The line number to edit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>new_line</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The new text to replace the existing line. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CarMaintenanceLibrary/CarMaintenance.cs" line="158" column="20" bodyfile="CarMaintenanceLibrary/CarMaintenance.cs" bodystart="158" bodyend="220"/>
+      </memberdef>
+      <memberdef kind="function" id="class_car_maintenance_library_1_1_car_maintenance_1ac939d0b1360c44a559c584bdef160d4b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int CarMaintenanceLibrary.CarMaintenance.FileLineDelete</definition>
+        <argsstring>(string fileName, int LineNumberToDelete)</argsstring>
+        <name>FileLineDelete</name>
+        <qualifiedname>CarMaintenanceLibrary.CarMaintenance.FileLineDelete</qualifiedname>
+        <param>
+          <type>string</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>LineNumberToDelete</declname>
+        </param>
+        <briefdescription>
+<para>This function Opens a binary file, deletes the line user wanted and make adjustments on line number acordingly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the file to delete the line from. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>line_number_to_delete</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The line number to delete. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>0 on success. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="CarMaintenanceLibrary/CarMaintenance.cs" line="230" column="20" bodyfile="CarMaintenanceLibrary/CarMaintenance.cs" bodystart="230" bodyend="307"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>Class CarMaintenance for Functions </para>
+    </detaileddescription>
+    <location file="CarMaintenanceLibrary/CarMaintenance.cs" line="23" column="11" bodyfile="CarMaintenanceLibrary/CarMaintenance.cs" bodystart="24" bodyend="308"/>
+    <listofallmembers>
+      <member refid="class_car_maintenance_library_1_1_car_maintenance_1a9fcc76ad526bc3cb2f48beb6c5240f9c" prot="public" virt="non-virtual"><scope>CarMaintenanceLibrary::CarMaintenance</scope><name>FileAppend</name></member>
+      <member refid="class_car_maintenance_library_1_1_car_maintenance_1a0057cdd5f861e2481dd7954b4f277817" prot="public" virt="non-virtual"><scope>CarMaintenanceLibrary::CarMaintenance</scope><name>FileEdit</name></member>
+      <member refid="class_car_maintenance_library_1_1_car_maintenance_1ac939d0b1360c44a559c584bdef160d4b" prot="public" virt="non-virtual"><scope>CarMaintenanceLibrary::CarMaintenance</scope><name>FileLineDelete</name></member>
+      <member refid="class_car_maintenance_library_1_1_car_maintenance_1aa258d1de425fd824af2489c87dfadbba" prot="public" virt="non-virtual"><scope>CarMaintenanceLibrary::CarMaintenance</scope><name>FileRead</name></member>
+      <member refid="class_car_maintenance_library_1_1_car_maintenance_1aadb32d8fec5955a917b7a5fbc11870ca" prot="public" virt="non-virtual"><scope>CarMaintenanceLibrary::CarMaintenance</scope><name>FileWrite</name></member>
+      <member refid="class_car_maintenance_library_1_1_car_maintenance_1aadfaf4948aef41a4c2f6127a55f57ed9" prot="private" virt="non-virtual"><scope>CarMaintenanceLibrary::CarMaintenance</scope><name>myFile</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

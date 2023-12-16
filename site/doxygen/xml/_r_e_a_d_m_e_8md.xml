@@ -1,0 +1,1072 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+<para>readme file */ </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>*</para>
+</listitem></itemizedlist>
+</para>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md0">
+<title>Functionalities</title>
+<para>In menu, user can see, register, update, delete a record he wants. Crop records and livestock records are contained separately which makes updating and following these records easy. If update function chosen from menu user can change any line he wants with ease even there is a million records. Same thing goes for delete function as well, user can delete a specified line or whole record if he/she wants. There is also a User Authentication system, nobody without correct username and password can access these records. These records contains information as below:</para>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md1">
+<title>Carm Management System:</title>
+<para>1)Service History Tracking <verbatim>o   Vehicle’s Model
+o   Vehicle’s service km
+o   Service Provider
+o   Service Cost
+</verbatim></para>
+<para>2-)Maintenance Reminders <verbatim>o   Vehicle’s Model
+o   Vehicle’s service km
+o   Service Type
+</verbatim> 3-)Expense Logging <verbatim>o   Vehicle’s Model
+o   Expense Type
+o   Expense Date
+o   Cost
+</verbatim></para>
+<para>4-)Fuel Efficiency Reports <verbatim>o   Vehicle’s Model
+o   L/100KM Fuel consumption
+</verbatim> </para>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md2">
+<title>Testing and Validation</title>
+<para>We tested and documented whole system with gtest and Ctest. It has %100 coverage test and %100 success at unit test results</para>
+</sect3>
+<sect1 id="_r_e_a_d_m_e_8md_1autotoc_md3">
+<title>Visual Studio .NET Core Project Template</title>
+<sect2 id="_r_e_a_d_m_e_8md_1autotoc_md4">
+<title>Releases</title>
+<para><itemizedlist>
+<listitem><para><ulink url="https://github.com/ucoruh/vs-net-core-template/releases/latest"><image type="html" name="https://badgen.net/github/release/ucoruh/vs-net-core-template" alt="GitHub release badge" inline="yes"></image>
+</ulink></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="_r_e_a_d_m_e_8md_1autotoc_md5">
+<title>Platforms</title>
+<para><itemizedlist>
+<listitem><para><image type="html" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+ <image type="latex" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+ <image type="rtf" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+ <image type="docbook" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+ <image type="xml" name="badge-ubuntu.svg" inline="yes">Ubuntu badge</image>
+</para>
+</listitem><listitem><para><image type="html" name="badge-macos.svg" inline="yes">macOS badge</image>
+ <image type="latex" name="badge-macos.svg" inline="yes">macOS badge</image>
+ <image type="rtf" name="badge-macos.svg" inline="yes">macOS badge</image>
+ <image type="docbook" name="badge-macos.svg" inline="yes">macOS badge</image>
+ <image type="xml" name="badge-macos.svg" inline="yes">macOS badge</image>
+</para>
+</listitem><listitem><para><image type="html" name="badge-windows.svg" inline="yes">Windows badge</image>
+ <image type="latex" name="badge-windows.svg" inline="yes">Windows badge</image>
+ <image type="rtf" name="badge-windows.svg" inline="yes">Windows badge</image>
+ <image type="docbook" name="badge-windows.svg" inline="yes">Windows badge</image>
+ <image type="xml" name="badge-windows.svg" inline="yes">Windows badge</image>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="_r_e_a_d_m_e_8md_1autotoc_md6">
+<title>Test Coverage</title>
+<para><ulink url="https://github.com/ucoruh/vs-net-core-template/actions/workflows/build_check_ubuntu_windows.yml"><image type="html" name="https://github.com/ucoruh/vs-net-core-template/actions/workflows/build_check_ubuntu_windows.yml/badge.svg" alt=".NET Windows + Doxygen + Test + Release" inline="yes"></image>
+</ulink></para>
+<para><bold>Coverage</bold></para>
+<para><itemizedlist>
+<listitem><para><image type="html" name="badge_combined.svg" inline="yes">All</image>
+ <image type="latex" name="badge_combined.svg" inline="yes">All</image>
+ <image type="rtf" name="badge_combined.svg" inline="yes">All</image>
+ <image type="docbook" name="badge_combined.svg" inline="yes">All</image>
+ <image type="xml" name="badge_combined.svg" inline="yes">All</image>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Branch Coverage</bold></para>
+<para><itemizedlist>
+<listitem><para><image type="html" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+ <image type="latex" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+ <image type="rtf" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+ <image type="docbook" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+ <image type="xml" name="badge_branchcoverage.svg" inline="yes">Branch Coverage</image>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Line Coverage</bold></para>
+<para><itemizedlist>
+<listitem><para><image type="html" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+ <image type="latex" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+ <image type="rtf" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+ <image type="docbook" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+ <image type="xml" name="badge_linecoverage.svg" inline="yes">Line Coverage</image>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>Method Coverage</bold></para>
+<para><itemizedlist>
+<listitem><para><image type="html" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+ <image type="latex" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+ <image type="rtf" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+ <image type="docbook" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+ <image type="xml" name="badge_methodcoverage.svg" inline="yes">Method Coverage</image>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="_r_e_a_d_m_e_8md_1autotoc_md7">
+<title>Overview</title>
+<para>This project template provide you to easily create release, testing with coverage and share documentation with other parties. Also process everthing with github actions</para>
+</sect2>
+<sect2 id="_r_e_a_d_m_e_8md_1autotoc_md8">
+<title>Envorienment Setup</title>
+<para>Install required application to your PC</para>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md9">
+<title>Visual Studio Community Edition Setup</title>
+<para>Install all components or update your installation be sure that you have installed **.Net Core 7.0** and <bold>XUnit</bold></para>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md10">
+<title>Package Manager Setup</title>
+<sect4 id="_r_e_a_d_m_e_8md_1autotoc_md11">
+<title>Windows Setup</title>
+<para>We will install required application with package manager on Windows so use following script to install <ulink url="https://chocolatey.org/install">chocolatey</ulink> and <ulink url="https://scoop.sh/">scoop</ulink></para>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">echo<sp/>Checking<sp/>if<sp/>Chocolatey<sp/>is<sp/>installed...</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>exist<sp/>&quot;%ProgramData%\Chocolatey\bin\choco.exe&quot;<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Chocolatey<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>Chocolatey...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>powershell<sp/>-Command<sp/>&quot;Set-ExecutionPolicy<sp/>Bypass<sp/>-Scope<sp/>Process<sp/>-Force;<sp/>iex<sp/>((New-Object<sp/>System.Net.WebClient).DownloadString(&apos;https://chocolatey.org/install.ps1&apos;))&quot;</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">echo<sp/>Checking<sp/>if<sp/>Scoop<sp/>is<sp/>installed...</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>scoop<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Scoop<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Scoop<sp/>is<sp/>not<sp/>installed.<sp/>Installing<sp/>Scoop...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>powershell<sp/>Invoke-Expression<sp/>(New-Object<sp/>System.Net.WebClient).DownloadString(&apos;https://get.scoop.sh&apos;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>powershell<sp/>Set-ExecutionPolicy<sp/>RemoteSigned<sp/>-scope<sp/>CurrentUser</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">pause</highlight></codeline>
+</programlisting></para>
+</sect4>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md12">
+<title>Pre-Commit Code Formatter Astyle Installation</title>
+<para>Before each commit also with batch script we will format our code with astyle we need to install it with package manager as following script you can visit package manager web site for more details <ulink url="https://community.chocolatey.org/packages/astyle">Chocolatey Software | Artistic Style 3.2.1</ulink> and <ulink url="https://astyle.sourceforge.net/">https://astyle.sourceforge.net/</ulink></para>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline><highlight class="normal">echo<sp/>Installing<sp/>Astyle...</highlight></codeline>
+<codeline><highlight class="normal">choco<sp/>install<sp/>astyle</highlight></codeline>
+</programlisting></para>
+<para>Astyle tool need configuration there is example configuration named <computeroutput>astyle-options.txt</computeroutput></para>
+<para><programlisting filename=".yaml"><codeline><highlight class="normal">#<sp/>https://github.com/brchiu/openairinterface5g/blob/master/ci-scripts/astyle-options.txt</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>OAI<sp/>is<sp/>using<sp/>a<sp/>style<sp/>that<sp/>is<sp/>similar<sp/>to<sp/>the<sp/>Google<sp/>style</highlight></codeline>
+<codeline><highlight class="normal">--style=google</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>long<sp/>options<sp/>can<sp/>be<sp/>written<sp/>without<sp/>the<sp/>preceding<sp/>&apos;--&apos;</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Convert<sp/>tabs<sp/>to<sp/>spaces</highlight></codeline>
+<codeline><highlight class="normal">convert-tabs</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Indentation<sp/>is<sp/>2<sp/>spaces</highlight></codeline>
+<codeline><highlight class="normal">indent=spaces=2</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Indent<sp/>&apos;switch&apos;<sp/>blocks<sp/>so<sp/>that<sp/>the<sp/>&apos;case<sp/>X:&apos;<sp/>statements<sp/>are<sp/>indented<sp/>in<sp/>the<sp/>switch<sp/>block.<sp/></highlight></codeline>
+<codeline><highlight class="normal">indent-switches</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Indent<sp/>preprocessor<sp/>blocks<sp/>at<sp/>bracket<sp/>level<sp/>0.</highlight></codeline>
+<codeline><highlight class="normal">indent-preproc-block</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Indent<sp/>multi-line<sp/>preprocessor<sp/>#define<sp/>statements.</highlight></codeline>
+<codeline><highlight class="normal">indent-preproc-define</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Indent<sp/>C++<sp/>comments<sp/>beginning<sp/>in<sp/>column<sp/>one.</highlight></codeline>
+<codeline><highlight class="normal">indent-col1-comments</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Pad<sp/>empty<sp/>lines<sp/>around<sp/>header<sp/>blocks</highlight></codeline>
+<codeline><highlight class="normal">break-blocks</highlight></codeline>
+<codeline><highlight class="normal">delete-empty-lines</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Attach<sp/>a<sp/>pointer<sp/>or<sp/>reference<sp/>operator<sp/>(*,<sp/>&amp;,<sp/>or<sp/>^)<sp/>to<sp/>the<sp/>variable<sp/>name<sp/>(right)</highlight></codeline>
+<codeline><highlight class="normal">align-pointer=name</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>code<sp/>line<sp/>length<sp/>is<sp/>200<sp/>characters/columns<sp/>(this<sp/>is<sp/>the<sp/>maximum<sp/>allowed<sp/>by<sp/>astyle)</highlight></codeline>
+<codeline><highlight class="normal">max-code-length=200</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>If<sp/>the<sp/>line<sp/>contains<sp/>logical<sp/>conditionals<sp/>they<sp/>will<sp/>be<sp/>placed<sp/>first<sp/>on<sp/>the<sp/>new<sp/>line.</highlight></codeline>
+<codeline><highlight class="normal">break-after-logical</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Force<sp/>use<sp/>of<sp/>the<sp/>linux<sp/>end<sp/>of<sp/>line</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>lineend=linux</highlight></codeline>
+</programlisting></para>
+<para>After installation and config file generation we can format our code with following script this script look for .cs extension and format related files according to configuration in astyle-options.txt</para>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">echo<sp/>Formatting<sp/>Code<sp/>with<sp/>Astyle...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">astyle<sp/>--options=&quot;astyle-options.txt&quot;<sp/>--recursive<sp/>*.cs</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">pause</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md13">
+<title>Doxygen and Graphviz Setup + MkDocs Material Theme</title>
+<para>We will use package manager for this but also we can use several tools I prefer to use following script to install all parties, This setup also use for mkdocs material them documentation generation maybe we can use for project website generation</para>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rem<sp/>force<sp/>re-install<sp/>need<sp/>&quot;--force<sp/>--force-dependencies<sp/>-y&quot;<sp/>parameters</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>Pandoc<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>pandoc<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Pandoc<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>Pandoc...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>pandoc<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>rsvg-convert<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>rsvg-convert<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>rsvg-convert<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>rsvg-convert...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>rsvg-convert<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>Python<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>python<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Python<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>Python...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>python<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>Miktex<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>miktex<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Miktex<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>Miktex...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>miktex<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>CuRL<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>curl<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>curl<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>CuRL...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>curl<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>MARP-CLI<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>marp<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>MARP-CLI<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>MARP-CLI...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>marp-cli<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>Doxygen<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>doxygen<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>MARP-CLI<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>Doxygen...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>doxygen.install<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>Doxygen<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>dot<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Graphviz<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>Graphviz...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>graphviz<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>pymdown-extensions</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-material</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-material-extensions</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-simple-hooks</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-video</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-minify-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-git-revision-date-localized-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-minify-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-static-i18n</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-with-pdf</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>qrcode</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-awesome-pages-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-embed-external-markdown</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-include-markdown-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-ezlinks-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-git-authors-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-git-committers-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-exclude</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>pptx2md</highlight></codeline>
+<codeline><highlight class="normal">pause</highlight></codeline>
+</programlisting></para>
+<para>After doxygen installation create default doxygen file with -g option</para>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">doxygen<sp/>-g</highlight></codeline>
+</programlisting></para>
+<para>This will create Doxyfile for us to modify. Use Doxywizard to modify file. Be sure that your output directory should be **./docs/doxygen** and all warnings should be opened and warnings stop operations.</para>
+<sect4 id="_r_e_a_d_m_e_8md_1autotoc_md14">
+<title>coverxygen Setup</title>
+<para>We are parsing doxygen XML output with coverxygen and generate info file for LCOV. This tool generate output that LCOV use and generate HTML document coverage report</para>
+<para>To install coverxygen you need python and pip</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline><highlight class="normal">echo<sp/>Installing<sp/>converxygen<sp/>doxygen<sp/>XML<sp/>parser</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>coverxygen</highlight></codeline>
+</programlisting></para>
+</sect4>
+<sect4 id="_r_e_a_d_m_e_8md_1autotoc_md15">
+<title>LCOV Setup</title>
+<para>LCOV is use to generate HTML document coverage tool in this project, but it can be used for different purposes. You can use choco package manager to install application as follow</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline><highlight class="normal">echo<sp/>Installing<sp/>Report<sp/>Generator...</highlight></codeline>
+<codeline><highlight class="normal">choco<sp/>install<sp/>lcov<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">echo<sp/>lcov<sp/>and<sp/>genhtml<sp/>located<sp/>on<sp/>C:\ProgramData\chocolatey\lib\lcov\tools\bin\</highlight></codeline>
+<codeline><highlight class="normal">pause</highlight></codeline>
+</programlisting></para>
+</sect4>
+<sect4 id="_r_e_a_d_m_e_8md_1autotoc_md16">
+<title>ReportGenerator Setup</title>
+<para>We need to install <ulink url="https://reportgenerator.io/">reportgenerator</ulink>for creation of HTML test reports, we will use choco to install visit package manager web site <ulink url="https://community.chocolatey.org/packages/reportgenerator.portable">Chocolatey Software | ReportGenerator (Portable) - Generates reports for various code coverage tools 5.1.20</ulink></para>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline><highlight class="normal">echo<sp/>Installing<sp/>Report<sp/>Generator...</highlight></codeline>
+<codeline><highlight class="normal">choco<sp/>install<sp/>reportgenerator.portable</highlight></codeline>
+</programlisting></para>
+</sect4>
+</sect3>
+</sect2>
+<sect2 id="_r_e_a_d_m_e_8md_1autotoc_md17">
+<title>Repository Setup</title>
+<sect4 id="_r_e_a_d_m_e_8md_1autotoc_md18">
+<title>Github Repositoy Creation</title>
+<para>First create a empty project in github and clone it to your PC,</para>
+</sect4>
+<sect4 id="_r_e_a_d_m_e_8md_1autotoc_md19">
+<title>Pre-Commit Action Restrictions</title>
+<para>Use following pre-commit script and replace it with <computeroutput>.git/hook/precommit</computeroutput></para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#!/bin/bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Installation:</highlight></codeline>
+<codeline><highlight class="normal">#<sp/><sp/><sp/>Copy<sp/>this<sp/>script<sp/>as<sp/>pre-commit<sp/>to<sp/>.git/hooks<sp/>folder</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">OPTIONS=&quot;--options=astyle-options.txt&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Check<sp/>if<sp/>.gitignore<sp/>file<sp/>exists</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>!<sp/>-f<sp/>astyle-options.txt<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;[!]<sp/>astyle-options.txt<sp/>file<sp/>not<sp/>found.<sp/>Please<sp/>make<sp/>sure<sp/>the<sp/>astyle-options.txt<sp/>file<sp/>is<sp/>present.&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">RETURN=0</highlight></codeline>
+<codeline><highlight class="normal">ASTYLE=$(command<sp/>-v<sp/>astyle)</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>$?<sp/>-ne<sp/>0<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;[!]<sp/>AStyle<sp/>is<sp/>not<sp/>installed.<sp/>Unable<sp/>to<sp/>check<sp/>source<sp/>file<sp/>format<sp/>policy.&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Check<sp/>if<sp/>.gitignore<sp/>file<sp/>exists</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>!<sp/>-f<sp/>.gitignore<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;[!]<sp/>.gitignore<sp/>file<sp/>not<sp/>found.<sp/>Please<sp/>make<sp/>sure<sp/>the<sp/>.gitignore<sp/>file<sp/>is<sp/>present.&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Check<sp/>if<sp/>README.md<sp/>file<sp/>exists</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>!<sp/>-f<sp/>README.md<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;[!]<sp/>README.md<sp/>file<sp/>not<sp/>found.<sp/>Please<sp/>make<sp/>sure<sp/>the<sp/>README.md<sp/>file<sp/>is<sp/>present.&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Check<sp/>if<sp/>.gitignore<sp/>file<sp/>exists</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>!<sp/>-f<sp/>Doxyfile<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;[!]<sp/>Doxyfile<sp/>file<sp/>not<sp/>found.<sp/>Please<sp/>make<sp/>sure<sp/>the<sp/>Doxyfile<sp/>file<sp/>is<sp/>present.&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">FILES=$(git<sp/>diff<sp/>--cached<sp/>--name-only<sp/>--diff-filter=ACMRTUXB<sp/>|<sp/>grep<sp/>-E<sp/>&quot;\.(cs|java|c|cpp|h)$&quot;)</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>FILE<sp/>in<sp/>$FILES;<sp/>do</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>FORMATTED=$(<sp/>&quot;$ASTYLE&quot;<sp/>$OPTIONS<sp/>&lt;<sp/>&quot;$FILE&quot;<sp/>2&gt;&amp;1<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>[<sp/>$?<sp/>-ne<sp/>0<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&quot;[!]<sp/>Error<sp/>formatting<sp/>$FILE:&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&quot;$FORMATTED&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RETURN=1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>elif<sp/>[<sp/>-n<sp/>&quot;$FORMATTED&quot;<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&quot;Formatted<sp/>$FILE&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&quot;$FORMATTED&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&quot;&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&quot;$FORMATTED&quot;<sp/>&gt;<sp/>&quot;$FILE&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>git<sp/>add<sp/>&quot;$FILE&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>fi</highlight></codeline>
+<codeline><highlight class="normal">done</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>$RETURN<sp/>-eq<sp/>1<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;Make<sp/>sure<sp/>you<sp/>have<sp/>run<sp/>AStyle<sp/>with<sp/>the<sp/>following<sp/>options:&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>$OPTIONS<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">exit<sp/>$RETURN</highlight></codeline>
+</programlisting></para>
+<para>This script will check astyle-options.txt file, gitignore file, <ref refid="_r_e_a_d_m_e_8md" kindref="compound">README.md</ref> file and Doxyfile is exist if not it will be terminate your commit operation. Also after <computeroutput>astyle</computeroutput> installation and <computeroutput>astyle-options.txt</computeroutput> generation it will automatically format your source code before each commit. Formatting configuration will be stored in <computeroutput>astyle-options.txt</computeroutput> .</para>
+</sect4>
+<sect4 id="_r_e_a_d_m_e_8md_1autotoc_md20">
+<title>Create .gitignore with TOPTAL API via batch script</title>
+<para>Use the following script to generate .gitignore file, you can change gitignore file by changing the configuration after <computeroutput><ulink url="https://www.toptal.com/developers/gitignore/api">https://www.toptal.com/developers/gitignore/api</ulink></computeroutput></para>
+<para>This is the selected configuration</para>
+<para><computeroutput>c,csharp,vs,visualstudio,visualstudiocode,java,maven,c++,cmake,eclipse,netbeans</computeroutput></para>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">set<sp/>API_URL=https://www.toptal.com/developers/gitignore/api/c,csharp,vs,visualstudio,visualstudiocode,java,maven,c++,cmake,eclipse,netbeans</highlight></codeline>
+<codeline><highlight class="normal">set<sp/>OUTPUT_FILE=.gitignore</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Set<sp/>the<sp/>running<sp/>folder<sp/>to<sp/>the<sp/>current<sp/>working<sp/>folder</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Download<sp/>the<sp/>API<sp/>results<sp/>using<sp/>curl</highlight></codeline>
+<codeline><highlight class="normal">curl<sp/>-s<sp/>-o<sp/>%OUTPUT_FILE%<sp/>%API_URL%</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">echo<sp/>Downloaded<sp/>.gitignore<sp/>file<sp/>from<sp/>%API_URL%<sp/>and<sp/>saved<sp/>as<sp/>%OUTPUT_FILE%</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">pause</highlight></codeline>
+</programlisting></para>
+</sect4>
+<sect4 id="_r_e_a_d_m_e_8md_1autotoc_md21">
+<title>Create an Empty README.md file</title>
+<para>Create and EMPTY <computeroutput><ref refid="_r_e_a_d_m_e_8md" kindref="compound">README.md</ref></computeroutput> file and during project fill required parts</para>
+</sect4>
+<sect4 id="_r_e_a_d_m_e_8md_1autotoc_md22">
+<title>Create Default Doxyfile</title>
+<para>Use following command to generate default <computeroutput>Doxyfile</computeroutput> if you didn&apos;t create or you can use pre-configured configuration and you can edit over this configurations. Be sure that your output directory should be **./docs** and all warnings should be opened and warnings stop operations.</para>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">doxygen<sp/>-g</highlight></codeline>
+</programlisting></para>
+</sect4>
+<sect4 id="_r_e_a_d_m_e_8md_1autotoc_md23">
+<title>First commit is ready, You can commit and push your work.</title>
+<para>You can use gitextension to commit your work, check if you get any error than return steps and check missing parts.</para>
+</sect4>
+</sect2>
+<sect2 id="_r_e_a_d_m_e_8md_1autotoc_md24">
+<title>Project Creation</title>
+<para>Project creation will be based on CLI and dotnet you can see examples in the link</para>
+<para><ulink url="https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new">dotnet new</ulink></para>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md25">
+<title>Check dotnet version and installation</title>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">dotnet<sp/>--version</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md26">
+<title>Create Solution with Name</title>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">dotnet<sp/>new<sp/>sln<sp/>-n<sp/>CalculatorLibrary</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md27">
+<title>Create Project Class Library with Name</title>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">dotnet<sp/>new<sp/>classlib<sp/>-n<sp/>CalculatorLibrary</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md28">
+<title>Add Project to Solution</title>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">dotnet<sp/>sln<sp/>add<sp/>CalculatorLibrary</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md29">
+<title>Create XUnit Test for Project</title>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">dotnet<sp/>new<sp/>xunit<sp/>-n<sp/>CalculatorLibrary.Tests</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md30">
+<title>Add Project to UnitTest Dependecy</title>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">dotnet<sp/>add<sp/>CalculatorLibrary.Tests/CalculatorLibrary.Tests.csproj<sp/>reference<sp/>CalculatorLibrary/CalculatorLibrary.csproj</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md31">
+<title>Add Consol Application</title>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">dotnet<sp/>new<sp/>console<sp/>-n<sp/>CalculatorApp</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md32">
+<title>Add Console Application to Solution</title>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">dotnet<sp/>sln<sp/>add<sp/>CalculatorApp</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md33">
+<title>Add Library to Application Dependecy</title>
+<para><programlisting filename=".batch"><codeline><highlight class="normal">dotnet<sp/>add<sp/>CalculatorApp/CalculatorApp.csproj<sp/>reference<sp/>CalculatorLibrary/CalculatorLibrary.csproj</highlight></codeline>
+</programlisting></para>
+<para>After this step commit and push your work.</para>
+</sect3>
+</sect2>
+<sect2 id="_r_e_a_d_m_e_8md_1autotoc_md34">
+<title>Project Development</title>
+<para><itemizedlist>
+<listitem><para>Rename Class Files</para>
+</listitem><listitem><para>Rename Test Files</para>
+</listitem><listitem><para>Write Your Functions</para>
+</listitem><listitem><para>Write Your Unit Tests</para>
+</listitem><listitem><para>Write Your Code Documenation</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="_r_e_a_d_m_e_8md_1autotoc_md35">
+<title>Github CI and Github Actions</title>
+<sect3 id="_r_e_a_d_m_e_8md_1autotoc_md36">
+<title>Create Token</title>
+<para>Create Fine-grained personal access tokens <ulink url="https://github.com/settings/tokens?type=beta">Github Token</ulink> and give repository permissions. Also kept token safe. </para>
+</sect3>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">/**</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@file<sp/>README.md</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*<sp/>@brief<sp/>readme<sp/>file</highlight></codeline>
+<codeline><highlight class="normal"><sp/>*/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Functionalities</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>menu,<sp/>user<sp/>can<sp/>see,<sp/>register,<sp/>update,<sp/>delete<sp/>a<sp/>record<sp/>he<sp/>wants.<sp/>Crop<sp/>records<sp/>and<sp/>livestock<sp/>records<sp/>are<sp/>contained<sp/>separately<sp/>which<sp/>makes<sp/>updating<sp/>and<sp/>following<sp/>these<sp/>records<sp/>easy.<sp/>If<sp/>update<sp/>function<sp/>chosen<sp/>from<sp/>menu<sp/>user<sp/>can<sp/>change<sp/>any<sp/>line<sp/>he<sp/>wants<sp/>with<sp/>ease<sp/>even<sp/>there<sp/>is<sp/>a<sp/>million<sp/>records.<sp/>Same<sp/>thing<sp/>goes<sp/>for<sp/>delete<sp/>function<sp/>as<sp/>well,<sp/>user<sp/>can<sp/>delete<sp/>a<sp/>specified<sp/>line<sp/>or<sp/>whole<sp/>record<sp/>if<sp/>he/she<sp/>wants.<sp/>There<sp/>is<sp/>also<sp/>a<sp/>User<sp/>Authentication<sp/>system,<sp/>nobody<sp/>without<sp/>correct<sp/>username<sp/>and<sp/>password<sp/>can<sp/>access<sp/>these<sp/>records.</highlight></codeline>
+<codeline><highlight class="normal">These<sp/>records<sp/>contains<sp/>information<sp/>as<sp/>below:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Carm<sp/>Management<sp/>System:<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">1)Service<sp/>History<sp/>Tracking</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>Vehicle’s<sp/>Model</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>Vehicle’s<sp/>service<sp/>km</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>Service<sp/>Provider</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>Service<sp/>Cost</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">2-)Maintenance<sp/>Reminders</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>Vehicle’s<sp/>Model</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>Vehicle’s<sp/>service<sp/>km</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>Service<sp/>Type</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">3-)Expense<sp/>Logging</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>Vehicle’s<sp/>Model</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>Expense<sp/>Type</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>Expense<sp/>Date</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>Cost</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">4-)Fuel<sp/>Efficiency<sp/>Reports</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>Vehicle’s<sp/>Model</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>o<sp/><sp/><sp/>L/100KM<sp/>Fuel<sp/>consumption</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Testing<sp/>and<sp/>Validation</highlight></codeline>
+<codeline><highlight class="normal">We<sp/>tested<sp/>and<sp/>documented<sp/>whole<sp/>system<sp/>with<sp/>gtest<sp/>and<sp/>Ctest.<sp/>It<sp/>has<sp/>%100<sp/>coverage<sp/>test<sp/>and<sp/>%100<sp/>success<sp/>at<sp/>unit<sp/>test<sp/>results</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Visual<sp/>Studio<sp/>.NET<sp/>Core<sp/>Project<sp/>Template</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Releases</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>[![GitHub<sp/>release<sp/>badge](https://badgen.net/github/release/ucoruh/vs-net-core-template)](https://github.com/ucoruh/vs-net-core-template/releases/latest)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Platforms</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Ubuntu<sp/>badge](assets/badge-ubuntu.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![macOS<sp/>badge](assets/badge-macos.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Windows<sp/>badge](assets/badge-windows.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Test<sp/>Coverage</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[![.NET<sp/>Windows<sp/>+<sp/>Doxygen<sp/>+<sp/>Test<sp/>+<sp/><sp/>Release](https://github.com/ucoruh/vs-net-core-template/actions/workflows/build_check_ubuntu_windows.yml/badge.svg)](https://github.com/ucoruh/vs-net-core-template/actions/workflows/build_check_ubuntu_windows.yml)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Coverage**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![All](assets/badge_combined.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Branch<sp/>Coverage**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Branch<sp/>Coverage](assets/badge_branchcoverage.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Line<sp/>Coverage**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Line<sp/>Coverage](assets/badge_linecoverage.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**Method<sp/>Coverage**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>![Method<sp/>Coverage](assets/badge_methodcoverage.svg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Overview</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>project<sp/>template<sp/>provide<sp/>you<sp/>to<sp/>easily<sp/>create<sp/>release,<sp/>testing<sp/>with<sp/>coverage<sp/>and<sp/>share<sp/>documentation<sp/>with<sp/>other<sp/>parties.<sp/>Also<sp/>process<sp/>everthing<sp/>with<sp/>github<sp/>actions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Envorienment<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Install<sp/>required<sp/>application<sp/>to<sp/>your<sp/>PC</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Visual<sp/>Studio<sp/>Community<sp/>Edition<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Install<sp/>all<sp/>components<sp/>or<sp/>update<sp/>your<sp/>installation<sp/>be<sp/>sure<sp/>that<sp/>you<sp/>have<sp/>installed<sp/><sp/>**.Net<sp/>Core<sp/>7.0**<sp/><sp/>and<sp/>**XUnit**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Package<sp/>Manager<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Windows<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">We<sp/>will<sp/>install<sp/>required<sp/>application<sp/>with<sp/>package<sp/>manager<sp/>on<sp/>Windows<sp/>so<sp/>use<sp/>following<sp/>script<sp/>to<sp/>install<sp/>[chocolatey](https://chocolatey.org/install)<sp/>and<sp/>[scoop](https://scoop.sh/)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">echo<sp/>Checking<sp/>if<sp/>Chocolatey<sp/>is<sp/>installed...</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>exist<sp/>&quot;%ProgramData%\Chocolatey\bin\choco.exe&quot;<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Chocolatey<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>Chocolatey...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>powershell<sp/>-Command<sp/>&quot;Set-ExecutionPolicy<sp/>Bypass<sp/>-Scope<sp/>Process<sp/>-Force;<sp/>iex<sp/>((New-Object<sp/>System.Net.WebClient).DownloadString(&apos;https://chocolatey.org/install.ps1&apos;))&quot;</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">echo<sp/>Checking<sp/>if<sp/>Scoop<sp/>is<sp/>installed...</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>scoop<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Scoop<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Scoop<sp/>is<sp/>not<sp/>installed.<sp/>Installing<sp/>Scoop...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>powershell<sp/>Invoke-Expression<sp/>(New-Object<sp/>System.Net.WebClient).DownloadString(&apos;https://get.scoop.sh&apos;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>powershell<sp/>Set-ExecutionPolicy<sp/>RemoteSigned<sp/>-scope<sp/>CurrentUser</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">pause</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Pre-Commit<sp/>Code<sp/>Formatter<sp/>Astyle<sp/>Installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Before<sp/>each<sp/>commit<sp/>also<sp/>with<sp/>batch<sp/>script<sp/>we<sp/>will<sp/>format<sp/>our<sp/>code<sp/>with<sp/>astyle<sp/>we<sp/>need<sp/>to<sp/>install<sp/>it<sp/>with<sp/>package<sp/>manager<sp/>as<sp/>following<sp/>script<sp/>you<sp/>can<sp/>visit<sp/>package<sp/>manager<sp/>web<sp/>site<sp/>for<sp/>more<sp/>details<sp/>[Chocolatey<sp/>Software<sp/>|<sp/>Artistic<sp/>Style<sp/>3.2.1](https://community.chocolatey.org/packages/astyle)<sp/>and<sp/>https://astyle.sourceforge.net/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline><highlight class="normal">echo<sp/>Installing<sp/>Astyle...</highlight></codeline>
+<codeline><highlight class="normal">choco<sp/>install<sp/>astyle</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Astyle<sp/>tool<sp/>need<sp/>configuration<sp/>there<sp/>is<sp/>example<sp/>configuration<sp/>named<sp/>`astyle-options.txt`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```yaml</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>https://github.com/brchiu/openairinterface5g/blob/master/ci-scripts/astyle-options.txt</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>OAI<sp/>is<sp/>using<sp/>a<sp/>style<sp/>that<sp/>is<sp/>similar<sp/>to<sp/>the<sp/>Google<sp/>style</highlight></codeline>
+<codeline><highlight class="normal">--style=google</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>long<sp/>options<sp/>can<sp/>be<sp/>written<sp/>without<sp/>the<sp/>preceding<sp/>&apos;--&apos;</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Convert<sp/>tabs<sp/>to<sp/>spaces</highlight></codeline>
+<codeline><highlight class="normal">convert-tabs</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Indentation<sp/>is<sp/>2<sp/>spaces</highlight></codeline>
+<codeline><highlight class="normal">indent=spaces=2</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Indent<sp/>&apos;switch&apos;<sp/>blocks<sp/>so<sp/>that<sp/>the<sp/>&apos;case<sp/>X:&apos;<sp/>statements<sp/>are<sp/>indented<sp/>in<sp/>the<sp/>switch<sp/>block.<sp/></highlight></codeline>
+<codeline><highlight class="normal">indent-switches</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Indent<sp/>preprocessor<sp/>blocks<sp/>at<sp/>bracket<sp/>level<sp/>0.</highlight></codeline>
+<codeline><highlight class="normal">indent-preproc-block</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Indent<sp/>multi-line<sp/>preprocessor<sp/>#define<sp/>statements.</highlight></codeline>
+<codeline><highlight class="normal">indent-preproc-define</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Indent<sp/>C++<sp/>comments<sp/>beginning<sp/>in<sp/>column<sp/>one.</highlight></codeline>
+<codeline><highlight class="normal">indent-col1-comments</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Pad<sp/>empty<sp/>lines<sp/>around<sp/>header<sp/>blocks</highlight></codeline>
+<codeline><highlight class="normal">break-blocks</highlight></codeline>
+<codeline><highlight class="normal">delete-empty-lines</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Attach<sp/>a<sp/>pointer<sp/>or<sp/>reference<sp/>operator<sp/>(*,<sp/>&amp;,<sp/>or<sp/>^)<sp/>to<sp/>the<sp/>variable<sp/>name<sp/>(right)</highlight></codeline>
+<codeline><highlight class="normal">align-pointer=name</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>The<sp/>code<sp/>line<sp/>length<sp/>is<sp/>200<sp/>characters/columns<sp/>(this<sp/>is<sp/>the<sp/>maximum<sp/>allowed<sp/>by<sp/>astyle)</highlight></codeline>
+<codeline><highlight class="normal">max-code-length=200</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>If<sp/>the<sp/>line<sp/>contains<sp/>logical<sp/>conditionals<sp/>they<sp/>will<sp/>be<sp/>placed<sp/>first<sp/>on<sp/>the<sp/>new<sp/>line.</highlight></codeline>
+<codeline><highlight class="normal">break-after-logical</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Force<sp/>use<sp/>of<sp/>the<sp/>linux<sp/>end<sp/>of<sp/>line</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>lineend=linux</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">After<sp/>installation<sp/>and<sp/>config<sp/>file<sp/>generation<sp/>we<sp/>can<sp/>format<sp/>our<sp/>code<sp/>with<sp/>following<sp/>script<sp/>this<sp/>script<sp/>look<sp/>for<sp/>.cs<sp/>extension<sp/>and<sp/>format<sp/>related<sp/>files<sp/>according<sp/>to<sp/>configuration<sp/>in<sp/>astyle-options.txt</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">echo<sp/>Formatting<sp/>Code<sp/>with<sp/>Astyle...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">astyle<sp/>--options=&quot;astyle-options.txt&quot;<sp/>--recursive<sp/>*.cs</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">pause</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Doxygen<sp/>and<sp/>Graphviz<sp/>Setup<sp/>+<sp/>MkDocs<sp/>Material<sp/>Theme</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">We<sp/>will<sp/>use<sp/>package<sp/>manager<sp/>for<sp/>this<sp/>but<sp/>also<sp/>we<sp/>can<sp/>use<sp/>several<sp/>tools<sp/>I<sp/>prefer<sp/>to<sp/>use<sp/>following<sp/>script<sp/>to<sp/>install<sp/>all<sp/>parties,<sp/>This<sp/>setup<sp/>also<sp/>use<sp/>for<sp/>mkdocs<sp/>material<sp/>them<sp/>documentation<sp/>generation<sp/>maybe<sp/>we<sp/>can<sp/>use<sp/>for<sp/>project<sp/>website<sp/>generation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rem<sp/>force<sp/>re-install<sp/>need<sp/>&quot;--force<sp/>--force-dependencies<sp/>-y&quot;<sp/>parameters</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>Pandoc<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>pandoc<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Pandoc<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>Pandoc...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>pandoc<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>rsvg-convert<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>rsvg-convert<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>rsvg-convert<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>rsvg-convert...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>rsvg-convert<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>Python<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>python<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Python<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>Python...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>python<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>Miktex<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>miktex<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Miktex<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>Miktex...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>miktex<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>CuRL<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>curl<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>curl<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>CuRL...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>curl<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>MARP-CLI<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>marp<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>MARP-CLI<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>MARP-CLI...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>marp-cli<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>Doxygen<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>doxygen<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>MARP-CLI<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>Doxygen...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>doxygen.install<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Test<sp/>if<sp/>Doxygen<sp/>is<sp/>installed</highlight></codeline>
+<codeline><highlight class="normal">where<sp/>dot<sp/>&gt;nul<sp/>2&gt;&amp;1</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>%errorlevel%==0<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Graphviz<sp/>is<sp/>already<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal">)<sp/>else<sp/>(</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>Installing<sp/>Graphviz...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>choco<sp/>install<sp/>graphviz<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>pymdown-extensions</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-material</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-material-extensions</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-simple-hooks</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-video</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-minify-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-git-revision-date-localized-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-minify-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-static-i18n</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-with-pdf</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>qrcode</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-awesome-pages-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-embed-external-markdown</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-include-markdown-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-ezlinks-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-git-authors-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-git-committers-plugin</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>mkdocs-exclude</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>pptx2md</highlight></codeline>
+<codeline><highlight class="normal">pause</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">After<sp/>doxygen<sp/>installation<sp/>create<sp/>default<sp/>doxygen<sp/>file<sp/>with<sp/>-g<sp/>option</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">doxygen<sp/>-g</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>will<sp/>create<sp/>Doxyfile<sp/>for<sp/>us<sp/>to<sp/>modify.<sp/>Use<sp/>Doxywizard<sp/>to<sp/>modify<sp/>file.<sp/>Be<sp/>sure<sp/>that<sp/>your<sp/>output<sp/>directory<sp/>should<sp/>be<sp/>**./docs/doxygen**<sp/>and<sp/>all<sp/>warnings<sp/>should<sp/>be<sp/>opened<sp/>and<sp/>warnings<sp/>stop<sp/>operations.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>coverxygen<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">We<sp/>are<sp/>parsing<sp/>doxygen<sp/>XML<sp/>output<sp/>with<sp/>coverxygen<sp/>and<sp/>generate<sp/>info<sp/>file<sp/>for<sp/>LCOV.<sp/>This<sp/>tool<sp/>generate<sp/>output<sp/>that<sp/>LCOV<sp/>use<sp/>and<sp/>generate<sp/>HTML<sp/>document<sp/>coverage<sp/>report</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">To<sp/>install<sp/>coverxygen<sp/>you<sp/>need<sp/>python<sp/>and<sp/>pip</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline><highlight class="normal">echo<sp/>Installing<sp/>converxygen<sp/>doxygen<sp/>XML<sp/>parser</highlight></codeline>
+<codeline><highlight class="normal">pip<sp/>install<sp/>coverxygen</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>LCOV<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">LCOV<sp/>is<sp/>use<sp/>to<sp/>generate<sp/>HTML<sp/>document<sp/>coverage<sp/>tool<sp/>in<sp/>this<sp/>project,<sp/>but<sp/>it<sp/>can<sp/>be<sp/>used<sp/>for<sp/>different<sp/>purposes.<sp/>You<sp/>can<sp/>use<sp/>choco<sp/>package<sp/>manager<sp/>to<sp/>install<sp/>application<sp/>as<sp/>follow</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline><highlight class="normal">echo<sp/>Installing<sp/>Report<sp/>Generator...</highlight></codeline>
+<codeline><highlight class="normal">choco<sp/>install<sp/>lcov<sp/>-y</highlight></codeline>
+<codeline><highlight class="normal">echo<sp/>lcov<sp/>and<sp/>genhtml<sp/>located<sp/>on<sp/>C:\ProgramData\chocolatey\lib\lcov\tools\bin\</highlight></codeline>
+<codeline><highlight class="normal">pause</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>ReportGenerator<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">We<sp/>need<sp/>to<sp/>install<sp/>[reportgenerator<sp/>](https://reportgenerator.io/)for<sp/>creation<sp/>of<sp/>HTML<sp/>test<sp/>reports,<sp/>we<sp/>will<sp/>use<sp/>choco<sp/>to<sp/>install<sp/>visit<sp/>package<sp/>manager<sp/>web<sp/>site<sp/>[Chocolatey<sp/>Software<sp/>|<sp/>ReportGenerator<sp/>(Portable)<sp/>-<sp/>Generates<sp/>reports<sp/>for<sp/>various<sp/>code<sp/>coverage<sp/>tools<sp/>5.1.20](https://community.chocolatey.org/packages/reportgenerator.portable)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline><highlight class="normal">@setlocal<sp/>enableextensions</highlight></codeline>
+<codeline><highlight class="normal">@cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline><highlight class="normal">echo<sp/>Installing<sp/>Report<sp/>Generator...</highlight></codeline>
+<codeline><highlight class="normal">choco<sp/>install<sp/>reportgenerator.portable</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Repository<sp/>Setup</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Github<sp/>Repositoy<sp/>Creation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">First<sp/>create<sp/>a<sp/>empty<sp/>project<sp/>in<sp/>github<sp/>and<sp/>clone<sp/>it<sp/>to<sp/>your<sp/>PC,</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Pre-Commit<sp/>Action<sp/>Restrictions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Use<sp/>following<sp/>pre-commit<sp/>script<sp/>and<sp/>replace<sp/>it<sp/>with<sp/>`.git/hook/precommit`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#!/bin/bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Installation:</highlight></codeline>
+<codeline><highlight class="normal">#<sp/><sp/><sp/>Copy<sp/>this<sp/>script<sp/>as<sp/>pre-commit<sp/>to<sp/>.git/hooks<sp/>folder</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">OPTIONS=&quot;--options=astyle-options.txt&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Check<sp/>if<sp/>.gitignore<sp/>file<sp/>exists</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>!<sp/>-f<sp/>astyle-options.txt<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;[!]<sp/>astyle-options.txt<sp/>file<sp/>not<sp/>found.<sp/>Please<sp/>make<sp/>sure<sp/>the<sp/>astyle-options.txt<sp/>file<sp/>is<sp/>present.&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">RETURN=0</highlight></codeline>
+<codeline><highlight class="normal">ASTYLE=$(command<sp/>-v<sp/>astyle)</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>$?<sp/>-ne<sp/>0<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;[!]<sp/>AStyle<sp/>is<sp/>not<sp/>installed.<sp/>Unable<sp/>to<sp/>check<sp/>source<sp/>file<sp/>format<sp/>policy.&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Check<sp/>if<sp/>.gitignore<sp/>file<sp/>exists</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>!<sp/>-f<sp/>.gitignore<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;[!]<sp/>.gitignore<sp/>file<sp/>not<sp/>found.<sp/>Please<sp/>make<sp/>sure<sp/>the<sp/>.gitignore<sp/>file<sp/>is<sp/>present.&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Check<sp/>if<sp/>README.md<sp/>file<sp/>exists</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>!<sp/>-f<sp/>README.md<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;[!]<sp/>README.md<sp/>file<sp/>not<sp/>found.<sp/>Please<sp/>make<sp/>sure<sp/>the<sp/>README.md<sp/>file<sp/>is<sp/>present.&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Check<sp/>if<sp/>.gitignore<sp/>file<sp/>exists</highlight></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>!<sp/>-f<sp/>Doxyfile<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;[!]<sp/>Doxyfile<sp/>file<sp/>not<sp/>found.<sp/>Please<sp/>make<sp/>sure<sp/>the<sp/>Doxyfile<sp/>file<sp/>is<sp/>present.&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>exit<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">FILES=$(git<sp/>diff<sp/>--cached<sp/>--name-only<sp/>--diff-filter=ACMRTUXB<sp/>|<sp/>grep<sp/>-E<sp/>&quot;\.(cs|java|c|cpp|h)$&quot;)</highlight></codeline>
+<codeline><highlight class="normal">for<sp/>FILE<sp/>in<sp/>$FILES;<sp/>do</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>FORMATTED=$(<sp/>&quot;$ASTYLE&quot;<sp/>$OPTIONS<sp/>&lt;<sp/>&quot;$FILE&quot;<sp/>2&gt;&amp;1<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>if<sp/>[<sp/>$?<sp/>-ne<sp/>0<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&quot;[!]<sp/>Error<sp/>formatting<sp/>$FILE:&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&quot;$FORMATTED&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RETURN=1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>elif<sp/>[<sp/>-n<sp/>&quot;$FORMATTED&quot;<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&quot;Formatted<sp/>$FILE&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&quot;$FORMATTED&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&quot;&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>echo<sp/>&quot;$FORMATTED&quot;<sp/>&gt;<sp/>&quot;$FILE&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>git<sp/>add<sp/>&quot;$FILE&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>fi</highlight></codeline>
+<codeline><highlight class="normal">done</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">if<sp/>[<sp/>$RETURN<sp/>-eq<sp/>1<sp/>];<sp/>then</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>&quot;Make<sp/>sure<sp/>you<sp/>have<sp/>run<sp/>AStyle<sp/>with<sp/>the<sp/>following<sp/>options:&quot;<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>echo<sp/>$OPTIONS<sp/>&gt;&amp;2</highlight></codeline>
+<codeline><highlight class="normal">fi</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">exit<sp/>$RETURN</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>script<sp/>will<sp/>check<sp/>astyle-options.txt<sp/>file,<sp/>gitignore<sp/>file,<sp/>README.md<sp/>file<sp/>and<sp/>Doxyfile<sp/>is<sp/>exist<sp/>if<sp/>not<sp/>it<sp/>will<sp/>be<sp/>terminate<sp/>your<sp/>commit<sp/>operation.<sp/>Also<sp/>after<sp/>`astyle`<sp/>installation<sp/>and<sp/>`astyle-options.txt`<sp/>generation<sp/>it<sp/>will<sp/>automatically<sp/>format<sp/>your<sp/>source<sp/>code<sp/>before<sp/>each<sp/>commit.<sp/>Formatting<sp/>configuration<sp/>will<sp/>be<sp/>stored<sp/>in<sp/>`astyle-options.txt`<sp/>.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Create<sp/>.gitignore<sp/>with<sp/>TOPTAL<sp/>API<sp/>via<sp/>batch<sp/>script</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Use<sp/>the<sp/>following<sp/>script<sp/>to<sp/>generate<sp/><sp/>.gitignore<sp/>file,<sp/>you<sp/>can<sp/>change<sp/>gitignore<sp/>file<sp/>by<sp/>changing<sp/>the<sp/>configuration<sp/>after<sp/>`https://www.toptal.com/developers/gitignore/api`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">This<sp/>is<sp/>the<sp/>selected<sp/>configuration</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">`c,csharp,vs,visualstudio,visualstudiocode,java,maven,c++,cmake,eclipse,netbeans`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">@echo<sp/>off</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">set<sp/>API_URL=https://www.toptal.com/developers/gitignore/api/c,csharp,vs,visualstudio,visualstudiocode,java,maven,c++,cmake,eclipse,netbeans</highlight></codeline>
+<codeline><highlight class="normal">set<sp/>OUTPUT_FILE=.gitignore</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Set<sp/>the<sp/>running<sp/>folder<sp/>to<sp/>the<sp/>current<sp/>working<sp/>folder</highlight></codeline>
+<codeline><highlight class="normal">cd<sp/>/d<sp/>&quot;%~dp0&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">REM<sp/>Download<sp/>the<sp/>API<sp/>results<sp/>using<sp/>curl</highlight></codeline>
+<codeline><highlight class="normal">curl<sp/>-s<sp/>-o<sp/>%OUTPUT_FILE%<sp/>%API_URL%</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">echo<sp/>Downloaded<sp/>.gitignore<sp/>file<sp/>from<sp/>%API_URL%<sp/>and<sp/>saved<sp/>as<sp/>%OUTPUT_FILE%</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">pause</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Create<sp/>an<sp/>Empty<sp/>README.md<sp/>file</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Create<sp/>and<sp/>EMPTY<sp/>`README.md`<sp/>file<sp/>and<sp/>during<sp/>project<sp/>fill<sp/>required<sp/>parts<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>Create<sp/>Default<sp/>Doxyfile</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Use<sp/>following<sp/>command<sp/>to<sp/>generate<sp/>default<sp/>`Doxyfile`<sp/>if<sp/>you<sp/>didn&apos;t<sp/>create<sp/>or<sp/>you<sp/>can<sp/>use<sp/>pre-configured<sp/>configuration<sp/>and<sp/>you<sp/>can<sp/>edit<sp/>over<sp/>this<sp/>configurations.<sp/>Be<sp/>sure<sp/>that<sp/>your<sp/>output<sp/>directory<sp/>should<sp/>be<sp/>**./docs**<sp/>and<sp/>all<sp/>warnings<sp/>should<sp/>be<sp/>opened<sp/>and<sp/>warnings<sp/>stop<sp/>operations.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">doxygen<sp/>-g</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">####<sp/>First<sp/>commit<sp/>is<sp/>ready,<sp/>You<sp/>can<sp/>commit<sp/>and<sp/>push<sp/>your<sp/>work.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">You<sp/>can<sp/>use<sp/>gitextension<sp/>to<sp/>commit<sp/>your<sp/>work,<sp/>check<sp/>if<sp/>you<sp/>get<sp/>any<sp/>error<sp/>than<sp/>return<sp/>steps<sp/>and<sp/>check<sp/>missing<sp/>parts.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Project<sp/>Creation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Project<sp/>creation<sp/>will<sp/>be<sp/>based<sp/>on<sp/>CLI<sp/>and<sp/>dotnet<sp/>you<sp/>can<sp/>see<sp/>examples<sp/>in<sp/>the<sp/>link</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[dotnet<sp/>new](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-new)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Check<sp/>dotnet<sp/>version<sp/>and<sp/>installation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">dotnet<sp/>--version</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Create<sp/>Solution<sp/>with<sp/>Name</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">dotnet<sp/>new<sp/>sln<sp/>-n<sp/>CalculatorLibrary</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Create<sp/>Project<sp/>Class<sp/>Library<sp/>with<sp/>Name</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">dotnet<sp/>new<sp/>classlib<sp/>-n<sp/>CalculatorLibrary</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Add<sp/>Project<sp/>to<sp/>Solution</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal"><sp/>dotnet<sp/>sln<sp/>add<sp/>CalculatorLibrary</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Create<sp/>XUnit<sp/>Test<sp/>for<sp/>Project</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">dotnet<sp/>new<sp/>xunit<sp/>-n<sp/>CalculatorLibrary.Tests</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Add<sp/>Project<sp/>to<sp/>UnitTest<sp/>Dependecy</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">dotnet<sp/>add<sp/>CalculatorLibrary.Tests/CalculatorLibrary.Tests.csproj<sp/>reference<sp/>CalculatorLibrary/CalculatorLibrary.csproj</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Add<sp/>Consol<sp/>Application</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">dotnet<sp/>new<sp/>console<sp/>-n<sp/>CalculatorApp</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Add<sp/>Console<sp/>Application<sp/>to<sp/>Solution</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">dotnet<sp/>sln<sp/>add<sp/>CalculatorApp</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Add<sp/>Library<sp/>to<sp/>Application<sp/>Dependecy</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```batch</highlight></codeline>
+<codeline><highlight class="normal">dotnet<sp/>add<sp/>CalculatorApp/CalculatorApp.csproj<sp/>reference<sp/>CalculatorLibrary/CalculatorLibrary.csproj</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">After<sp/>this<sp/>step<sp/>commit<sp/>and<sp/>push<sp/>your<sp/>work.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Project<sp/>Development</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Rename<sp/>Class<sp/>Files<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Rename<sp/>Test<sp/>Files</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Write<sp/>Your<sp/>Functions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Write<sp/>Your<sp/>Unit<sp/>Tests</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>Write<sp/>Your<sp/>Code<sp/>Documenation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Github<sp/>CI<sp/>and<sp/>Github<sp/>Actions</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Create<sp/>Token</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Create<sp/>Fine-grained<sp/>personal<sp/>access<sp/>tokens<sp/>[Github<sp/>Token](https://github.com/settings/tokens?type=beta)<sp/>and<sp/>give<sp/>repository<sp/>permissions.<sp/>Also<sp/>kept<sp/>token<sp/>safe.</highlight></codeline>
+    </programlisting>
+    <location file="README.md"/>
+  </compounddef>
+</doxygen>
