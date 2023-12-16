@@ -384,7 +384,7 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
         */
-        public int RegisterExpsenseRecord(string fileName = "expense_logging_records.bin", string carModel = "None", string expenseDate = "None", string expenseType = "None", int expense = 1) {
+        public int RegisterExpenseRecord(string fileName = "expense_logging_records.bin", string carModel = "None", string expenseDate = "None", string expenseType = "None", int expense = 1) {
             string record;
 
             if (carModel == "None" && expenseDate == "None" && expense == 1 && expenseType == "None")
@@ -420,7 +420,7 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
          */
-        public int EditExpsenseRecord(string fileName = "expense_logging_records.bin", int lineNumbertoEdit = 0, string carModel = "None", string expenseDate = "None", string expenseType = "None", int expense = 1)
+        public int EditExpenseRecord(string fileName = "expense_logging_records.bin", int lineNumbertoEdit = 0, string carModel = "None", string expenseDate = "None", string expenseType = "None", int expense = 1)
         {
             string record;
 
