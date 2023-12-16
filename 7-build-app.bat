@@ -33,7 +33,7 @@ echo Run lcov genhtml
 call perl C:\ProgramData\chocolatey\lib\lcov\tools\bin\genhtml --legend --title "Documentation Coverage Report" ./docs/coverxygen/lcov.info -o docs/coverxygen
 
 echo Testing Application with Coverage
-cd CalculatorLibrary.Tests
+cd CarMaintenanceLibrary.Tests
 call dotnet restore
 call dotnet add package coverlet.msbuild
 call dotnet build --configuration Release
