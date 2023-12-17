@@ -524,9 +524,9 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
 */
-        public int register_fuel_efficiency_record(string file_name = "fuel_efficiency_records.bin", string car_model = "None", float fuel_consumed = 1.0f, float road_traveled = 1.0f)
+        public int RegisterFuelEfficiencyRecord(string FileName = "fuel_efficiency_records.bin", string CarModel = "None", float FuelConsumed = 1.0f, float RoadTraveled = 1.0f)
         {
-            return 0;
+            if(CarModel ==)
         }
 
         /**
