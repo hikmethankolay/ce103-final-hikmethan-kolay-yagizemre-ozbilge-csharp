@@ -524,9 +524,16 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
 */
-        public int RegisterFuelEfficiencyRecord(string FileName = "fuel_efficiency_records.bin", string CarModel = "None", float FuelConsumed = 1.0f, float RoadTraveled = 1.0f)
+        public int RegisterFuelEfficiencyRecord(string FileName = "fuel_efficiency_records.bin", string carModel = "None", float fuelConsumed = 1.0f, float roadTraveled = 1.0f  )
         {
-            if(CarModel ==)
+            if(CarModel == "None" && FuelConsumed == 1.0f && RoadTraveled = 1.0f)
+            {
+                Console.WriteLine("What is the model of the car?");
+                CarModel = Console.WriteLine();
+                Console.WriteLine("What is the fuel consumed?");
+                FuelConsumed = Console.WriteLine();
+
+            }
         }
 
         /**
@@ -536,9 +543,52 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
 */
-        public int edit_fuel_efficiency_record(string file_name = "fuel_efficiency_records.bin", int line_number_to_edit = 0, string car_model = "None", float fuel_consumed = 1.0f, float road_traveled = 1.0f)
+        public int edit_fuel_efficiency_record(string FileName = "fuel_efficiency_records.bin", int lineNumberToEdit = 0, string carModel = "None", float fuelConsumed = 1.0f, float roadTraveled = 1.0f)
         {
-            return 0;
+            string record;
+            
+            if(carModel == "None" && lineNumberToEdit == 0 && fuelConsumed == 1 && roadTraveled == 1)
+            {
+                Console.WriteLine("Which do you want to edit?");
+                lineNumberToEdit = int.Parse(Console.WriteLine());
+                
+                if(!int.TryParse(Console.ReadLine() , out lineNumberToEdit))
+                {
+                    Console.WriteLine("Please use an integer");
+                    return -1;
+                }
+
+                Console.WriteLine("What is the model of the car?");
+                carModel = Console.ReadLine();
+                Console.WriteLine("What is the fuel consumed");
+                fuelConsumed = float.Parse(Console.ReadLine());
+
+                if(!float.TryParse(Console.ReadLine(), out fuelConsumed))
+                {
+                    Console.WriteLine("Please use a float");
+                    return -1;
+                }
+
+                Console.WriteLine("What is the road traveled");
+                roadTraveled = float.Parse(Console.ReadLine());
+
+                if (!float.TryParse(Console.ReadLine(), out roadTraveled))
+                {
+                    Console.WriteLine("Please use a float");
+                    return -1;
+                }
+            }
+
+            float efficiency = (fuelConsumed / roadTraveled) * 100;
+            record = $"{carModel}   {efficiency}";
+
+            if(FileEdit(FileName, lineNumberToEdit, record) == 0)
+            {
+               return 0;
+
+            } else {
+              return -1;
+            }
         }
 
         /**
