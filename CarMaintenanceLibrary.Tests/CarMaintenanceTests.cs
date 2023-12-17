@@ -349,5 +349,69 @@ namespace CarMaintenanceLibrary.Tests
             Assert.Equal(fail, car.DeleteFuelEfficiencyRecord("fuel_efficiency_records_test.bin", 5));
 
         }
+        [Fact]
+        public void TestRegisterReminder()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)VEHICLE MODEL | SERVICE KM | PLANNED SERVICE TYPE\n1-)Audi   1000   Brake\n";
+            car.RegisterMaintenanceReminderRecord("reminder_logging_records_test.bin","Audi",1000,"Brake");
+            Assert.Equal(testString, car.FileRead("reminder_logging_records_test.bin"));
+
+        }
+        [Fact]
+        public void TestRegisterReminder_2()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)VEHICLE MODEL | SERVICE KM | PLANNED SERVICE TYPE\n1-)Audi   1000   Brake\n2-)Ferrari   2000   Brake\n";
+            car.RegisterMaintenanceReminderRecord("reminder_logging_records_test_2.bin","Ferrari",2000,"Brake");
+            Assert.Equal(testString, car.FileRead("reminder_logging_records_test_2.bin"));
+        }
+
+        [Fact]
+        public void TestEditReminder()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)VEHICLE MODEL | SERVICE KM | PLANNED SERVICE TYPE\n1-)Mercedes   1100   Oil\n";
+            car.EditMaintenanceReminderRecord("reminder_logging_records_test_3.bin",1,"Mercedes", 1100, "Oil");
+            Assert.Equal(testString, car.FileRead("reminder_logging_records_test_3.bin"));
+            
+        }
+        [Fact]
+        public void TestEditReminderFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.EditMaintenanceReminderRecord("reminder_logging_records_testaaa.bin", 1,"Mercedes", 1100, "Oil"));
+
+        }
+        [Fact]
+        public void TestEditReminderFail_2()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.EditMaintenanceReminderRecord("reminder_logging_records_test.bin", 6,"Mercedes", 1100, "Oil"));
+
+        }
+        [Fact]
+        public void TestDeleteReminder()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)VEHICLE MODEL | SERVICE KM | PLANNED SERVICE TYPE\n";
+            car.DeleteMaintenanceReminderRecord("reminder_logging_records_test_4.bin",1);
+            Assert.Equal(testString, car.FileRead("reminder_logging_records_test_4.bin"));
+
+        }
+        [Fact]
+        public void TestDeleteReminderFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.DeleteMaintenanceReminderRecord("reminder_logging_records_testaaaa.bin", 1));
+
+        }
+        [Fact]
+        public void TestDeleteReminderFail_2()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.DeleteMaintenanceReminderRecord("reminder_logging_records_test.bin", 6));
+
+        }
     }
 }
