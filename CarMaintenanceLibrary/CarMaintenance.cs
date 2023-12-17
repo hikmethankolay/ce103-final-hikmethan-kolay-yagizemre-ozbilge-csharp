@@ -543,7 +543,7 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
 */
-        public int edit_fuel_efficiency_record(string FileName = "fuel_efficiency_records.bin", int lineNumberToEdit = 0, string carModel = "None", float fuelConsumed = 1.0f, float roadTraveled = 1.0f)
+        public int EditFuelEfficiencyRecord(string fileName = "fuel_efficiency_records.bin", int lineNumberToEdit = 0, string carModel = "None", float fuelConsumed = 1.0f, float roadTraveled = 1.0f)
         {
             string record;
             
@@ -587,7 +587,7 @@ namespace CarMaintenanceLibrary {
                return 0;
 
             } else {
-              return -1;
+                return -1;
             }
         }
 
@@ -598,9 +598,26 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
 */
-        public int delete_fuel_efficiency_record(string file_name = "fuel_efficiency_records.bin", int line_number_to_delete = 0)
+        public int DeleteFuelEfficiencyRecord(string fileName = "fuel_efficiency_records.bin", int lineNumberToDelete = 0)
         {
-            return 0;
+          if(lineNumberToDelete ==0)
+          {
+             Console.WriteLine("Which do you want to delete?");
+             lineNumberToDelete = int.Parse(Console.ReadLine());
+
+            if(!int.TryParse(Console.ReadLine(),out  lineNumberToDelete))
+            {
+              Console.WriteLine("Please use an integer");
+              return -1;
+            }
+          }
+
+          if (FileLineDelete(fileName, lineNumberToDelete) == 0)
+          {
+              return 0;
+          } else {
+              return -1;
+          }
         }
     }
 }
