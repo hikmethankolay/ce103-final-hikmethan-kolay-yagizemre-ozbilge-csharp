@@ -532,7 +532,7 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
         */
-        public int RegisterServiceHistory(string fileName = "service_history_records.bin", string vehicleModel = "None", int serviceKm = 1, string serviceProvider = "None",int serviceCost = 1)
+        public int RegisterServiceHistoryRecord(string fileName = "service_history_records.bin", string vehicleModel = "None", int serviceKm = 1, string serviceProvider = "None",int serviceCost = 1)
         {
             string record;
 
@@ -580,7 +580,7 @@ namespace CarMaintenanceLibrary {
          * @return 0 on success.
          * @return -1 on fail.
          */
-        public int EditServiceHistoryRecord(string fileName,int lineNumberToEdit = 0,string vehicleModel = "None",int serviceKm = 1,string serviceProvider = "None",int serviceCost = 1)
+        public int EditServiceHistoryRecord(string fileName = "service_history_records.bin",int lineNumberToEdit = 0,string vehicleModel = "None",int serviceKm = 1,string serviceProvider = "None",int serviceCost = 1)
         {
             string record;
 
@@ -633,7 +633,7 @@ namespace CarMaintenanceLibrary {
          * @return 0 on success.
          * @return -1 on fail.
          */
-        public int DeleteServiceHistoryRecord(string fileName, int lineNumberToDelete = 0)
+        public int DeleteServiceHistoryRecord(string fileName = "service_history_records.bin", int lineNumberToDelete = 0)
         {
             if (lineNumberToDelete == 0)
             {
@@ -809,18 +809,18 @@ namespace CarMaintenanceLibrary {
         {
             string record;
 
-            if(carModel == "None" && fuelConsumed == 1.0f && roadTraveled = 1.0f)
+            if(carModel == "None")
             {
                 Console.WriteLine("What is the model of the car?");
                 carModel = Console.ReadLine();
 
-                if(!int.TryParse(Console.ReadLine(), out fuelConsumed))
+                if(!float.TryParse(Console.ReadLine(), out fuelConsumed))
                 {
                     Console.WriteLine("Please use an integer");
                     return -1;
                 }
 
-                if (!int.TryParse(Console.ReadLine(), out roadTraveled))
+                if (!float.TryParse(Console.ReadLine(), out roadTraveled))
                 {
                     Console.WriteLine("Please use an integer");
                     return -1;
@@ -853,7 +853,7 @@ namespace CarMaintenanceLibrary {
             if(carModel == "None" && lineNumberToEdit == 0 && fuelConsumed == 1 && roadTraveled == 1)
             {
                 Console.WriteLine("Which do you want to edit?");
-                lineNumberToEdit = int.Parse(Console.WriteLine());
+                lineNumberToEdit = int.Parse(Console.ReadLine());
                 
                 if(!int.TryParse(Console.ReadLine() , out lineNumberToEdit))
                 {
@@ -885,7 +885,7 @@ namespace CarMaintenanceLibrary {
             float efficiency = (fuelConsumed / roadTraveled) * 100;
             record = $"{carModel}   {efficiency}";
 
-            if(FileEdit(FileName, lineNumberToEdit, record) == 0)
+            if(FileEdit(fileName, lineNumberToEdit, record) == 0)
             {
                return 0;
 
