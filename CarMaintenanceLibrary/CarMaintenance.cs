@@ -532,9 +532,45 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
         */
-        public int register_service_history_record(string file_name = "service_history_records.bin", string vehicle_model = "None", int service_km = 1, string service_provider = "None", int service_cost = 1)
+        public int RegisterServiceHistory(string fileName = "service_history_records.bin", string vehicleModel = "None", int serviceKm = 1, string serviceProvider = "None",int serviceCost = 1)
         {
-            return 0;
+            string record;
+
+            if (vehicleModel == "None" && serviceKm == 1 && serviceProvider == "None" && serviceCost == 1)
+            {
+                Console.Write("What is the model of vehicle? ");
+                vehicleModel = Console.ReadLine();
+
+                Console.Write("What is the service KM? ");
+                if (!int.TryParse(Console.ReadLine(), out serviceKm))
+                {
+                    Console.WriteLine("Please use an integer.");
+                    return -1;
+                }
+
+                Console.Write("Who is the service provider? ");
+                serviceProvider = Console.ReadLine();
+
+                Console.Write("What is the service cost? ");
+                if (!int.TryParse(Console.ReadLine(), out serviceCost))
+                {
+                    Console.WriteLine("Please use an integer.");
+                    return -1;
+                }
+            }
+
+            record = $"{vehicleModel}   {serviceKm}   {serviceProvider}   {serviceCost}";
+            if (File.Exists(fileName))
+            {
+                FileAppend(fileName, record);
+                return 0;
+            }
+            else
+            {
+                FileWrite(fileName, "VEHICLE MODEL | SERVICE KM | SERVICE PROVIDER | SERVICE COST");
+                FileAppend(fileName, record);
+                return 0;
+            }
         }
 
         /**
@@ -544,9 +580,50 @@ namespace CarMaintenanceLibrary {
          * @return 0 on success.
          * @return -1 on fail.
          */
-        public int edit_service_history_record(string file_name = "service_history_records.bin", int line_number_to_edit = 0, string vehicle_model = "None", int service_km = 1, string service_provider = "None",int service_cost = 1)
+        public int EditServiceHistoryRecord(string fileName,int lineNumberToEdit = 0,string vehicleModel = "None",int serviceKm = 1,string serviceProvider = "None",int serviceCost = 1)
         {
-            return 0;
+            string record;
+
+            if (vehicleModel == "None" && lineNumberToEdit == 0 && serviceKm == 1 && serviceProvider == "None" && serviceCost == 1)
+            {
+                Console.Write("Which line do you want to edit? ");
+                if (!int.TryParse(Console.ReadLine(), out lineNumberToEdit))
+                {
+                    Console.WriteLine("Please use an integer.");
+                    return -1;
+                }
+
+                Console.Write("What is the model of vehicle? ");
+                vehicleModel = Console.ReadLine();
+
+                Console.Write("What is the service KM? ");
+                if (!int.TryParse(Console.ReadLine(), out serviceKm))
+                {
+                    Console.WriteLine("Please use an integer.");
+                    return -1;
+                }
+
+                Console.Write("Who is the service provider? ");
+                serviceProvider = Console.ReadLine();
+
+                Console.Write("What is the service cost? ");
+                if (!int.TryParse(Console.ReadLine(), out serviceCost))
+                {
+                    Console.WriteLine("Please use an integer.");
+                    return -1;
+                }
+            }
+
+            record = $"{vehicleModel}   {serviceKm}   {serviceProvider}   {serviceCost}";
+
+            if (FileEdit(fileName, lineNumberToEdit, record) == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return -1;
+            }
         }
 
         /**
@@ -556,9 +633,26 @@ namespace CarMaintenanceLibrary {
          * @return 0 on success.
          * @return -1 on fail.
          */
-        public int delete_service_history_record(string file_name = "service_history_records.bin", int line_number_to_delete = 0)
+        public int DeleteServiceHistoryRecord(string fileName, int lineNumberToDelete = 0)
         {
-            return 0;
+            if (lineNumberToDelete == 0)
+            {
+                Console.Write("Which line do you want to delete? ");
+                if (!int.TryParse(Console.ReadLine(), out lineNumberToDelete))
+                {
+                    Console.WriteLine("Please use an integer.");
+                    return -1;
+                }
+            }
+
+            if (FileLineDelete(fileName, lineNumberToDelete) == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return -1;
+            }
         }
         /**
         * @brief This function register records to expense_logging_records.bin.

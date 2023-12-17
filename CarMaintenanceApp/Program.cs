@@ -81,17 +81,17 @@ class Program
                                     }
                                     else if (service_menu == 2)
                                     {
-                                        //RegisterServiceHistoryRecord();
+                                        RegisterServiceHistoryRecord();
                                         continue;
                                     }
                                     else if (service_menu == 3)
                                     {
-                                        //EditServiceHistoryRecord();
+                                        EditServiceHistoryRecord();
                                         continue;
                                     }
                                     else if (service_menu == 4)
                                     {
-                                        //DeleteServiceHistoryRecord();
+                                        DeleteServiceHistoryRecord();
                                         continue;
                                     }
                                     else if (service_menu == 5)
