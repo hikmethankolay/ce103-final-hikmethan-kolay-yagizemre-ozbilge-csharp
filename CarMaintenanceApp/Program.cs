@@ -4,7 +4,6 @@ using System.IO;
 
 class Program
 {
-    static FileStream? File;
 
     static void Main()
     {
@@ -38,18 +37,14 @@ class Program
 
                         do
                         {
-                            if (reminder_count == 0)
+                            if (File.Exists("maintenance_reminder_records.bin") && reminder_count == 0)
                             {
-                                File = new FileStream("maintenance_reminder_records.bin", FileMode.Open, FileAccess.Read);
-                                if (File != null)
-                                {
-                                    Console.WriteLine("\n------------You Have Scheduled Maintenance------------");
-                                    car.FileRead("maintenance_reminder_records.bin");
-                                    Console.WriteLine("-------------------------------------------------------");
-                                    File.Close();
-                                    reminder_count++;
-                                }
+                                Console.WriteLine("\n------------You Have Scheduled Maintenance-------------");
+                                car.FileRead("maintenance_reminder_records.bin");
+                                Console.WriteLine("-------------------------------------------------------");
+                                reminder_count++;
                             }
+
 
                             Console.WriteLine("\n----------Main Menu----------");
                             Console.WriteLine("1-)Service History Tracking");
@@ -122,17 +117,17 @@ class Program
                                     }
                                     else if (maintenance_reminder_menu == 2)
                                     {
-                                        //RegisterMaintenanceReminderRecord();
+                                        car.RegisterMaintenanceReminderRecord();
                                         continue;
                                     }
                                     else if (maintenance_reminder_menu == 3)
                                     {
-                                        //EditMaintenanceReminderRecord();
+                                        car.EditMaintenanceReminderRecord();
                                         continue;
                                     }
                                     else if (maintenance_reminder_menu == 4)
                                     {
-                                        //DeleteMaintenanceReminderRecord();
+                                        car.DeleteMaintenanceReminderRecord();
                                         continue;
                                     }
                                     else if (maintenance_reminder_menu == 5)
