@@ -313,9 +313,50 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on faill.
         */
-        public int user_register(string new_username = "None", string new_password = "None", string new_recovery_key = "None", string user_file = "user.bin", string choice = "None")
+        public int UserRegister(string newUsername = "None", string newPassword = "None", string newRecoveryKey = "None", string userFile = "user.bin", string choice = "None")
         {
-            return 0;
+            string loginInfo;
+
+            if (choice == "None")
+            {
+                Console.Write("Do you understand that if you create a new account all the records that have been saved so far will be deleted?[Y/N]: ");
+                choice = Console.ReadLine();
+            }
+
+            if (choice == "Y")
+            {
+                if (newUsername == "None" && newPassword == "None" && newRecoveryKey == "None")
+                {
+                    Console.WriteLine("Please enter a new username: ");
+                    newUsername = Console.ReadLine();
+                    Console.WriteLine("Please enter a new password: ");
+                    newPassword = Console.ReadLine();
+                    Console.WriteLine("\nWARNING!!!\nYou will use this to change password if needed, if you lost this you can't access logs without them being completely deleted\nWARNING!!!\n");
+                    Console.WriteLine("Please enter a new recovery key: ");
+                    newRecoveryKey = Console.ReadLine();
+                }
+
+                loginInfo = $"{newUsername}/{newPassword}/{newRecoveryKey}";
+            
+                using (myFile = new FileStream(userFile, FileMode.Create, FileAccess.Write))
+                {
+                    using (StreamWriter streamWriter = new StreamWriter(myFile))
+                    {
+                        streamWriter.Write(loginInfo);
+                    }
+                }
+
+                File.Delete("service_history_records.bin");
+                File.Delete("maintenance_reminder_records.bin");
+                File.Delete("expense_records.bin");
+                File.Delete("fuel_efficiency_records.bin");
+
+                return 0;
+            }
+            else
+            {
+                return -1;
+            }
         }
 
         /**
@@ -326,10 +367,67 @@ namespace CarMaintenanceLibrary {
          * @return 0 on success.
          * @return -1 on fail.
          */
-        public int user_login(string username = "None", string password = "None", string user_file = "user.bin")
+        public int UserLogin(string username = "None", string password = "None", string userFile = "user.bin")
         {
-            return 0;
+            string usernameRead = "";
+            string passwordRead = "";
+            int count = 0;
+            char i;
+
+            using (myFile = new FileStream(userFile, FileMode.Open, FileAccess.Read))
+            {
+                using (StreamReader streamReader = new StreamReader(myFile))
+                {
+                    if (streamReader.EndOfStream)
+                    {
+                        Console.WriteLine("There is no user info. Please register first.");
+                        return -1;
+                    }
+
+                    while ((i = (char)streamReader.Read()) != '\0') // Reading until the end of the file
+                    {
+                        if (i == '/')
+                        {
+                            count++;
+                            continue;
+                        }
+
+                        if (count == 0)
+                        {
+                            usernameRead += i;
+                        }
+                        else if (count == 1)
+                        {
+                            passwordRead += i;
+                        }
+                        else if (count == 2)
+                        {
+                            break;
+                        }
+                    }
+                }
+            }
+
+            if (username == "None" && password == "None")
+            {
+                Console.WriteLine("Please enter username:");
+                username = Console.ReadLine();
+                Console.WriteLine("Please enter password:");
+                password = Console.ReadLine();
+            }
+
+            if (username == usernameRead && password == passwordRead)
+            {
+                Console.WriteLine("Login Succesfull");
+                return 0;
+            }
+            else
+            {
+                Console.WriteLine("Wrong username or password");
+                return -1;
+            }
         }
+
 
         /**
          * @brief This function changes password of user.
@@ -338,10 +436,85 @@ namespace CarMaintenanceLibrary {
          * @return 0 on success.
          * @return -1 on fail.
          */
-        public int user_change_password(string recovery_key = "None", string new_password = "None", string user_file = "user.bin")
+        public int UserChangePassword(string recoveryKey = "None", string newPassword = "None", string userFile = "user.bin")
         {
-            return 0;
+            string usernameRead = "";
+            string recoveryKeyRead = "";
+            string newLoginInfo;
+            int count = 0;
+
+            using (FileStream fileStream = new FileStream(userFile, FileMode.Open, FileAccess.ReadWrite))
+            {
+                using (StreamReader streamReader = new StreamReader(fileStream))
+                {
+                    if (streamReader.EndOfStream)
+                    {
+                        Console.WriteLine("There is no user info. Please register first.");
+                        return -1;
+                    }
+
+                    char i;
+                    while ((i = (char)streamReader.Read()) != '\0') // Reading until the end of the file
+                    {
+                        if (i == '/')
+                        {
+                            count++;
+                            continue;
+                        }
+
+                        if (count == 0)
+                        {
+                            usernameRead += i;
+                        }
+                        else if (count == 1)
+                        {
+                            // Skipping password field
+                            continue;
+                        }
+                        else if (count == 2)
+                        {
+                            recoveryKeyRead += i;
+                        }
+                    }
+                }
+            }
+
+            if (recoveryKey == "None")
+            {
+                Console.Write("Please enter your recovery key: ");
+                recoveryKey = Console.ReadLine();
+            }
+
+            if (recoveryKeyRead == recoveryKey)
+            {
+                Console.WriteLine("Recovery Key Approved");
+
+                if (newPassword == "None")
+                {
+                    Console.Write("Please enter a new password: ");
+                    newPassword = Console.ReadLine();
+                }
+
+                newLoginInfo = $"{usernameRead}/{newPassword}/{recoveryKeyRead}";
+
+                using (FileStream fileStream = new FileStream(userFile, FileMode.Open, FileAccess.Write))
+                {
+                    using (StreamWriter streamWriter = new StreamWriter(fileStream))
+                    {
+                        streamWriter.Write(newLoginInfo);
+                    }
+                }
+
+                Console.WriteLine("Password changed successfully");
+                return 0;
+            }
+            else
+            {
+                Console.WriteLine("Wrong Recovery Key");
+                return -1;
+            }
         }
+
         /**
         * @brief This function register records to service_history_records.bin.
         *
