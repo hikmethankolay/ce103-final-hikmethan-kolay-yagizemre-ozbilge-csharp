@@ -81,17 +81,17 @@ class Program
                                     }
                                     else if (service_menu == 2)
                                     {
-                                        //RegisterServiceHistoryRecord();
+                                        car.RegisterServiceHistoryRecord();
                                         continue;
                                     }
                                     else if (service_menu == 3)
                                     {
-                                        //EditServiceHistoryRecord();
+                                        car.EditServiceHistoryRecord();
                                         continue;
                                     }
                                     else if (service_menu == 4)
                                     {
-                                        //DeleteServiceHistoryRecord();
+                                        car.DeleteServiceHistoryRecord();
                                         continue;
                                     }
                                     else if (service_menu == 5)
@@ -204,17 +204,17 @@ class Program
                                     }
                                     else if (fuel_efficiency_menu == 2)
                                     {
-                                        //RegisterFuelEfficiencyRecord();
+                                        car.RegisterFuelEfficiencyRecord();
                                         continue;
                                     }
                                     else if (fuel_efficiency_menu == 3)
                                     {
-                                        //EditFuelEfficiencyRecord();
+                                        car.EditFuelEfficiencyRecord();
                                         continue;
                                     }
                                     else if (fuel_efficiency_menu == 4)
                                     {
-                                        //DeleteFuelEfficiencyRecord();
+                                        car.DeleteFuelEfficiencyRecord();
                                         continue;
                                     }
                                     else if (fuel_efficiency_menu == 5)

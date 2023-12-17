@@ -532,9 +532,45 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
         */
-        public int register_service_history_record(string file_name = "service_history_records.bin", string vehicle_model = "None", int service_km = 1, string service_provider = "None", int service_cost = 1)
+        public int RegisterServiceHistoryRecord(string fileName = "service_history_records.bin", string vehicleModel = "None", int serviceKm = 1, string serviceProvider = "None",int serviceCost = 1)
         {
-            return 0;
+            string record;
+
+            if (vehicleModel == "None" && serviceKm == 1 && serviceProvider == "None" && serviceCost == 1)
+            {
+                Console.Write("What is the model of vehicle? ");
+                vehicleModel = Console.ReadLine();
+
+                Console.Write("What is the service KM? ");
+                if (!int.TryParse(Console.ReadLine(), out serviceKm))
+                {
+                    Console.WriteLine("Please use an integer.");
+                    return -1;
+                }
+
+                Console.Write("Who is the service provider? ");
+                serviceProvider = Console.ReadLine();
+
+                Console.Write("What is the service cost? ");
+                if (!int.TryParse(Console.ReadLine(), out serviceCost))
+                {
+                    Console.WriteLine("Please use an integer.");
+                    return -1;
+                }
+            }
+
+            record = $"{vehicleModel}   {serviceKm}   {serviceProvider}   {serviceCost}";
+            if (File.Exists(fileName))
+            {
+                FileAppend(fileName, record);
+                return 0;
+            }
+            else
+            {
+                FileWrite(fileName, "VEHICLE MODEL | SERVICE KM | SERVICE PROVIDER | SERVICE COST");
+                FileAppend(fileName, record);
+                return 0;
+            }
         }
 
         /**
@@ -544,9 +580,50 @@ namespace CarMaintenanceLibrary {
          * @return 0 on success.
          * @return -1 on fail.
          */
-        public int edit_service_history_record(string file_name = "service_history_records.bin", int line_number_to_edit = 0, string vehicle_model = "None", int service_km = 1, string service_provider = "None",int service_cost = 1)
+        public int EditServiceHistoryRecord(string fileName = "service_history_records.bin",int lineNumberToEdit = 0,string vehicleModel = "None",int serviceKm = 1,string serviceProvider = "None",int serviceCost = 1)
         {
-            return 0;
+            string record;
+
+            if (vehicleModel == "None" && lineNumberToEdit == 0 && serviceKm == 1 && serviceProvider == "None" && serviceCost == 1)
+            {
+                Console.Write("Which line do you want to edit? ");
+                if (!int.TryParse(Console.ReadLine(), out lineNumberToEdit))
+                {
+                    Console.WriteLine("Please use an integer.");
+                    return -1;
+                }
+
+                Console.Write("What is the model of vehicle? ");
+                vehicleModel = Console.ReadLine();
+
+                Console.Write("What is the service KM? ");
+                if (!int.TryParse(Console.ReadLine(), out serviceKm))
+                {
+                    Console.WriteLine("Please use an integer.");
+                    return -1;
+                }
+
+                Console.Write("Who is the service provider? ");
+                serviceProvider = Console.ReadLine();
+
+                Console.Write("What is the service cost? ");
+                if (!int.TryParse(Console.ReadLine(), out serviceCost))
+                {
+                    Console.WriteLine("Please use an integer.");
+                    return -1;
+                }
+            }
+
+            record = $"{vehicleModel}   {serviceKm}   {serviceProvider}   {serviceCost}";
+
+            if (FileEdit(fileName, lineNumberToEdit, record) == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return -1;
+            }
         }
 
         /**
@@ -556,9 +633,26 @@ namespace CarMaintenanceLibrary {
          * @return 0 on success.
          * @return -1 on fail.
          */
-        public int delete_service_history_record(string file_name = "service_history_records.bin", int line_number_to_delete = 0)
+        public int DeleteServiceHistoryRecord(string fileName = "service_history_records.bin", int lineNumberToDelete = 0)
         {
-            return 0;
+            if (lineNumberToDelete == 0)
+            {
+                Console.Write("Which line do you want to delete? ");
+                if (!int.TryParse(Console.ReadLine(), out lineNumberToDelete))
+                {
+                    Console.WriteLine("Please use an integer.");
+                    return -1;
+                }
+            }
+
+            if (FileLineDelete(fileName, lineNumberToDelete) == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return -1;
+            }
         }
         /**
         * @brief This function register records to expense_logging_records.bin.
@@ -711,9 +805,38 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
 */
-        public int register_fuel_efficiency_record(string file_name = "fuel_efficiency_records.bin", string car_model = "None", float fuel_consumed = 1.0f, float road_traveled = 1.0f)
+        public int RegisterFuelEfficiencyRecord(string fileName = "fuel_efficiency_records.bin", string carModel = "None", float fuelConsumed = 1.0f, float roadTraveled = 1.0f  )
         {
-            return 0;
+            string record;
+
+            if(carModel == "None")
+            {
+                Console.WriteLine("What is the model of the car?");
+                carModel = Console.ReadLine();
+
+                if(!float.TryParse(Console.ReadLine(), out fuelConsumed))
+                {
+                    Console.WriteLine("Please use an integer");
+                    return -1;
+                }
+
+                if (!float.TryParse(Console.ReadLine(), out roadTraveled))
+                {
+                    Console.WriteLine("Please use an integer");
+                    return -1;
+                }
+
+
+            }
+            record = $"{carModel} {fuelConsumed} {roadTraveled}";
+            if(FileWrite(fileName, record) == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return -1;
+            }
         }
 
         /**
@@ -723,9 +846,54 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
 */
-        public int edit_fuel_efficiency_record(string file_name = "fuel_efficiency_records.bin", int line_number_to_edit = 0, string car_model = "None", float fuel_consumed = 1.0f, float road_traveled = 1.0f)
+        public int EditFuelEfficiencyRecord(string fileName = "fuel_efficiency_records.bin", int lineNumberToEdit = 0, string carModel = "None", float fuelConsumed = 1.0f, float roadTraveled = 1.0f)
         {
-            return 0;
+            string record;
+            
+            if(carModel == "None" && lineNumberToEdit == 0 && fuelConsumed == 1 && roadTraveled == 1)
+            {
+                Console.WriteLine("Which do you want to edit?");
+                lineNumberToEdit = int.Parse(Console.ReadLine());
+                
+                if(!int.TryParse(Console.ReadLine() , out lineNumberToEdit))
+                {
+                    Console.WriteLine("Please use an integer");
+                    return -1;
+                }
+
+                Console.WriteLine("What is the model of the car?");
+                carModel = Console.ReadLine();
+                Console.WriteLine("What is the fuel consumed");
+                fuelConsumed = float.Parse(Console.ReadLine());
+
+                if(!float.TryParse(Console.ReadLine(), out fuelConsumed))
+                {
+                    Console.WriteLine("Please use a float");
+                    return -1;
+                }
+
+                Console.WriteLine("What is the road traveled");
+                roadTraveled = float.Parse(Console.ReadLine());
+
+                if (!float.TryParse(Console.ReadLine(), out roadTraveled))
+                {
+                    Console.WriteLine("Please use a float");
+                    return -1;
+                }
+            }
+
+            float efficiency = (fuelConsumed / roadTraveled) * 100;
+            record = $"{carModel}   {efficiency}";
+
+            if(FileEdit(fileName, lineNumberToEdit, record) == 0)
+            {
+               return 0;
+
+            } 
+            else 
+            {
+                return -1;
+            }
         }
 
         /**
@@ -735,9 +903,28 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
 */
-        public int delete_fuel_efficiency_record(string file_name = "fuel_efficiency_records.bin", int line_number_to_delete = 0)
+        public int DeleteFuelEfficiencyRecord(string fileName = "fuel_efficiency_records.bin", int lineNumberToDelete = 0)
         {
-            return 0;
+          if(lineNumberToDelete ==0)
+          {
+             Console.WriteLine("Which do you want to delete?");
+             lineNumberToDelete = int.Parse(Console.ReadLine());
+
+            if(!int.TryParse(Console.ReadLine(),out  lineNumberToDelete))
+            {
+              Console.WriteLine("Please use an integer");
+              return -1;
+            }
+          }
+
+          if (FileLineDelete(fileName, lineNumberToDelete) == 0)
+          {
+              return 0;
+          } 
+          else 
+          {
+             return -1;
+          }
         }
     }
 }
