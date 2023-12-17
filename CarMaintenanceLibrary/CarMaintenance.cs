@@ -524,15 +524,37 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on fail.
 */
-        public int RegisterFuelEfficiencyRecord(string FileName = "fuel_efficiency_records.bin", string carModel = "None", float fuelConsumed = 1.0f, float roadTraveled = 1.0f  )
+        public int RegisterFuelEfficiencyRecord(string fileName = "fuel_efficiency_records.bin", string carModel = "None", float fuelConsumed = 1.0f, float roadTraveled = 1.0f  )
         {
-            if(CarModel == "None" && FuelConsumed == 1.0f && RoadTraveled = 1.0f)
+            string record;
+
+            if(carModel == "None" && fuelConsumed == 1.0f && roadTraveled = 1.0f)
             {
                 Console.WriteLine("What is the model of the car?");
-                CarModel = Console.WriteLine();
-                Console.WriteLine("What is the fuel consumed?");
-                FuelConsumed = Console.WriteLine();
+                carModel = Console.ReadLine();
 
+                if(!int.TryParse(Console.ReadLine(), out fuelConsumed))
+                {
+                    Console.WriteLine("Please use an integer");
+                    return -1;
+                }
+
+                if (!int.TryParse(Console.ReadLine(), out roadTraveled))
+                {
+                    Console.WriteLine("Please use an integer");
+                    return -1;
+                }
+
+
+            }
+            record = $"{carModel} {fuelConsumed} {roadTraveled}";
+            if(FileWrite(fileName, record) == 0)
+            {
+                return 0;
+            }
+            else
+            {
+                return -1;
             }
         }
 
@@ -586,7 +608,9 @@ namespace CarMaintenanceLibrary {
             {
                return 0;
 
-            } else {
+            } 
+            else 
+            {
                 return -1;
             }
         }
@@ -615,8 +639,10 @@ namespace CarMaintenanceLibrary {
           if (FileLineDelete(fileName, lineNumberToDelete) == 0)
           {
               return 0;
-          } else {
-              return -1;
+          } 
+          else 
+          {
+             return -1;
           }
         }
     }
