@@ -99,20 +99,6 @@ namespace CarMaintenanceLibrary.Tests {
         }
 
         [Fact]
-        public void TestUserLoginFail()
-        {
-            CarMaintenance car = new CarMaintenance();
-            Assert.Equal(fail, car.UserLogin("username", "passwordaa", "usertest.bin"));
-        }
-
-        [Fact]
-        public void TestUserChangePasswordFail()
-        {
-            CarMaintenance car = new CarMaintenance();
-            Assert.Equal(fail, car.UserChangePassword("recoverykey", "newpassword", "usertest.bin"));
-        }
-
-        [Fact]
         public void TestUserRegister()
         {
             CarMaintenance car = new CarMaintenance();
@@ -132,28 +118,42 @@ namespace CarMaintenanceLibrary.Tests {
         public void TestUserLogin()
         {
             CarMaintenance car = new CarMaintenance();
-            Assert.Equal(success, car.UserLogin("username", "password", "usertest.bin"));
+            Assert.Equal(success, car.UserLogin("username", "password", "usertest_2.bin"));
+        }
+
+        [Fact]
+        public void TestUserLoginFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.UserLogin("usernameaa", "passwordaa", "usertest_2.bin"));
         }
 
         [Fact]
         public void TestUserLoginFail_2()
         {
             CarMaintenance car = new CarMaintenance();
-            Assert.Equal(fail, car.UserLogin("usernameaa", "passwordaa", "usertest.bin"));
+            Assert.Equal(fail, car.UserLogin("username", "password", "usertestfail.bin"));
         }
 
         [Fact]
         public void TestUserChangePassword()
         {
             CarMaintenance car = new CarMaintenance();
-            Assert.Equal(success, car.UserChangePassword("recoverykey", "newpassword", "usertest.bin"));
+            Assert.Equal(success, car.UserChangePassword("recoverykey", "newpassword", "usertest_3.bin"));
+        }
+
+        [Fact]
+        public void TestUserChangePasswordFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.UserChangePassword("recoverykey", "newpassword", "usertestfail.bin"));
         }
 
         [Fact]
         public void TestUserChangePasswordFail_2()
         {
             CarMaintenance car = new CarMaintenance();
-            Assert.Equal(fail, car.UserChangePassword("recoverykeyaaa", "newpassword", "usertest.bin"));
+            Assert.Equal(fail, car.UserChangePassword("recoverykeyaaa", "newpassword", "usertest_3.bin"));
         }
 
         [Fact]
@@ -219,9 +219,6 @@ namespace CarMaintenanceLibrary.Tests {
             CarMaintenance car = new CarMaintenance();
             Assert.Equal(fail, car.DeleteExpenseRecord("expense_logging_records_test.bin", 7));
         }
-
-
-
 
     }
 }

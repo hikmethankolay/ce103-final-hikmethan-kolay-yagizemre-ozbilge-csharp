@@ -372,7 +372,11 @@ namespace CarMaintenanceLibrary {
             string usernameRead = "";
             string passwordRead = "";
             int count = 0;
-            char i;
+
+            if (!File.Exists(userFile))
+            {
+                return -1;
+            }
 
             using (myFile = new FileStream(userFile, FileMode.Open, FileAccess.Read))
             {
@@ -384,8 +388,9 @@ namespace CarMaintenanceLibrary {
                         return -1;
                     }
 
-                    while ((i = (char)streamReader.Read()) != '\0') // Reading until the end of the file
+                    while (!streamReader.EndOfStream) // Reading until the end of the file
                     {
+                        char i = (char)streamReader.Read();
                         if (i == '/')
                         {
                             count++;
@@ -443,9 +448,14 @@ namespace CarMaintenanceLibrary {
             string newLoginInfo;
             int count = 0;
 
-            using (FileStream fileStream = new FileStream(userFile, FileMode.Open, FileAccess.ReadWrite))
+            if (!File.Exists(userFile))
             {
-                using (StreamReader streamReader = new StreamReader(fileStream))
+                return -1;
+            }
+
+            using (myFile = new FileStream(userFile, FileMode.Open, FileAccess.ReadWrite))
+            {
+                using (StreamReader streamReader = new StreamReader(myFile))
                 {
                     if (streamReader.EndOfStream)
                     {
@@ -453,9 +463,9 @@ namespace CarMaintenanceLibrary {
                         return -1;
                     }
 
-                    char i;
-                    while ((i = (char)streamReader.Read()) != '\0') // Reading until the end of the file
+                    while (!streamReader.EndOfStream) // Reading until the end of the file
                     {
+                        char i = (char)streamReader.Read();
                         if (i == '/')
                         {
                             count++;
@@ -576,14 +586,18 @@ namespace CarMaintenanceLibrary {
                 }
             }
 
-            record = $"{carModel} {expenseDate} {expenseType} {expense} ";
-            if (FileWrite(fileName, record) == 0)
+            record = $"{carModel}   {expenseDate}   {expenseType}   {expense}";
+
+            if (File.Exists(fileName))
             {
+                FileAppend(fileName, record);
                 return 0;
             }
             else
             {
-                return -1;
+                FileWrite(fileName, "CAR MODEL | EXPENSE DATE | EXPENSE TYPE | EXPENSE");
+                FileAppend(fileName, record);
+                return 0;
             }
         }
         /**
@@ -618,7 +632,7 @@ namespace CarMaintenanceLibrary {
                 }
             }
 
-            record = $"{carModel} {expenseDate} {expenseType} {expense} ";
+            record = $"{carModel}   {expenseDate}   {expenseType}   {expense}";
 
             if (FileEdit(fileName, lineNumbertoEdit, record) == 0) {
                 return 0;
@@ -637,7 +651,7 @@ namespace CarMaintenanceLibrary {
         {
             if (lineNumbertoDelete == 0)
             {
-                Console.WriteLine("Which do you want to delete?");
+                Console.WriteLine("Which line do you want to delete?");
                 lineNumbertoDelete = int.Parse(Console.ReadLine());
 
                 if (int.TryParse(Console.ReadLine(), out lineNumbertoDelete))
