@@ -375,6 +375,7 @@ namespace CarMaintenanceLibrary {
 
             if (!File.Exists(userFile))
             {
+                Console.WriteLine("There is no user info. Please register first.");
                 return -1;
             }
 
@@ -382,14 +383,7 @@ namespace CarMaintenanceLibrary {
             {
                 using (StreamReader streamReader = new StreamReader(myFile))
                 {
-                    if (streamReader.EndOfStream)
-                    {
-                        Console.WriteLine("There is no user info. Please register first.");
-                        return -1;
-                    }
-
-                    while (!streamReader.EndOfStream) // Reading until the end of the file
-                    {
+                    while (!streamReader.EndOfStream){ // Reading until the end of the file
                         char i = (char)streamReader.Read();
                         if (i == '/')
                         {
@@ -450,6 +444,7 @@ namespace CarMaintenanceLibrary {
 
             if (!File.Exists(userFile))
             {
+                Console.WriteLine("There is no user info. Please register first.");
                 return -1;
             }
 
@@ -457,14 +452,7 @@ namespace CarMaintenanceLibrary {
             {
                 using (StreamReader streamReader = new StreamReader(myFile))
                 {
-                    if (streamReader.EndOfStream)
-                    {
-                        Console.WriteLine("There is no user info. Please register first.");
-                        return -1;
-                    }
-
-                    while (!streamReader.EndOfStream) // Reading until the end of the file
-                    {
+                    while (!streamReader.EndOfStream){ // Reading until the end of the file 
                         char i = (char)streamReader.Read();
                         if (i == '/')
                         {
