@@ -4,6 +4,7 @@ namespace CarMaintenanceLibrary.Tests {
     {
         private string? testString;
         private const int fail = -1;
+        private const int success = 0;
 
         [Fact]
         public void TestFileRead()
@@ -95,6 +96,128 @@ namespace CarMaintenanceLibrary.Tests {
         {
             CarMaintenance car = new CarMaintenance();
             Assert.Equal(fail, car.FileLineDelete("test4.bin", 100));
+        }
+
+        [Fact]
+        public void TestUserRegister()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "username/password/recoverykey";
+            car.UserRegister("username", "password", "recoverykey", "usertest.bin", "Y");
+            Assert.Equal(testString,car.FileRead("usertest.bin"));
+        }
+
+        [Fact]
+        public void TestUserRegisterFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.UserRegister("username", "password", "recoverykey", "usertest.bin", "N"));
+        }
+
+        [Fact]
+        public void TestUserLogin()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(success, car.UserLogin("username", "password", "usertest_2.bin"));
+        }
+
+        [Fact]
+        public void TestUserLoginFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.UserLogin("usernameaa", "passwordaa", "usertest_2.bin"));
+        }
+
+        [Fact]
+        public void TestUserLoginFail_2()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.UserLogin("username", "password", "usertestfail.bin"));
+        }
+
+        [Fact]
+        public void TestUserChangePassword()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(success, car.UserChangePassword("recoverykey", "newpassword", "usertest_3.bin"));
+        }
+
+        [Fact]
+        public void TestUserChangePasswordFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.UserChangePassword("recoverykey", "newpassword", "usertestfail.bin"));
+        }
+
+        [Fact]
+        public void TestUserChangePasswordFail_2()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.UserChangePassword("recoverykeyaaa", "newpassword", "usertest_3.bin"));
+        }
+
+        [Fact]
+        public void TestRegisterExpense()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)CAR MODEL | EXPENSE DATE | EXPENSE TYPE | EXPENSE\n1-)Audi   10/10/2023   Brake   15000\n";
+            car.RegisterExpenseRecord("expense_logging_records_test.bin", "Audi", "10/10/2023", "Brake", 15000);
+            Assert.Equal(testString, car.FileRead("expense_logging_records_test.bin"));
+        }
+
+        [Fact]
+        public void TestRegisterExpense_2()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)CAR MODEL | EXPENSE DATE | EXPENSE TYPE | EXPENSE\n1-)Audi   10/10/2023   Brake   15000\n2-)Ferrari   11/11/2023   Oil   19000\n";
+            car.RegisterExpenseRecord("expense_logging_records_test_2.bin", "Ferrari", "11/11/2023", "Oil", 19000);
+            Assert.Equal(testString, car.FileRead("expense_logging_records_test_2.bin"));
+        }
+
+        [Fact]
+        public void TestEditExpense()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)CAR MODEL | EXPENSE DATE | EXPENSE TYPE | EXPENSE\n1-)Mercedes   11/11/2023   Oil   17000\n";
+            car.EditExpenseRecord("expense_logging_records_test_3.bin", 1, "Mercedes", "11/11/2023", "Oil", 17000);
+            Assert.Equal(testString, car.FileRead("expense_logging_records_test_3.bin"));
+        }
+
+        [Fact]
+        public void TestEditExpenseFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.EditExpenseRecord("expense_logging_records_testaaa.bin", 1, "Audi", "10/10/2023", "Brake", 15000));
+        }
+
+        [Fact]
+        public void TestEditExpenseFail_2()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.EditExpenseRecord("expense_logging_records_test.bin", 8, "Audi", "10/10/2023", "Brake", 15000));
+        }
+
+        [Fact]
+        public void TestDeleteExpense()
+        {
+            CarMaintenance car = new CarMaintenance();
+            testString = "0-)CAR MODEL | EXPENSE DATE | EXPENSE TYPE | EXPENSE\n";
+            car.DeleteExpenseRecord("expense_logging_records_test_4.bin", 1);
+            Assert.Equal(testString, car.FileRead("expense_logging_records_test_4.bin"));
+        }
+
+        [Fact]
+        public void TestDeleteExpenseFail()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.DeleteExpenseRecord("expense_logging_records_testaaa.bin", 1));
+        }
+
+        [Fact]
+        public void TestDeleteExpenseFail_2()
+        {
+            CarMaintenance car = new CarMaintenance();
+            Assert.Equal(fail, car.DeleteExpenseRecord("expense_logging_records_test.bin", 7));
         }
 
     }

@@ -4,7 +4,7 @@ using System.IO;
 
 class Program
 {
-    static FileStream File;
+    static FileStream? File;
 
     static void Main()
     {
@@ -32,8 +32,7 @@ class Program
             {
                 
                 case 1:
-                    ///UserLogin() == 0
-                    if (true)
+                    if (car.UserLogin() == 0)
                     {
                         bool run_2 = true;
 
@@ -244,11 +243,11 @@ class Program
                     break;
 
                 case 2:
-                    //UserRegister();
+                    car.UserRegister();
                     continue;
 
                 case 3:
-                    //UserChangePassword();
+                    car.UserChangePassword();
                     continue;
 
                 case 4:

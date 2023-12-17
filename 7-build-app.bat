@@ -54,6 +54,8 @@ del test3.bin
 del test4.bin
 del test5.bin
 del usertest.bin
+del usertest_2.bin
+del usertest_3.bin
 del *_test.bin
 del *_test_2.bin
 del *_test_3.bin
