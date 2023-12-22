@@ -33,7 +33,7 @@ namespace CarMaintenanceLibrary {
         /**
          * Opens a binary file, deletes all of its content, and writes given text to it.
          *
-         * @param file_name The name of the file to write.
+         * @param FileName The name of the file to write.
          * @param text The text to write.
          * @return 0 on success.
          */
@@ -54,7 +54,7 @@ namespace CarMaintenanceLibrary {
         * @brief Opens a binary file, Reads all of its content, seperate line with "\n" and write them to console, also returns a string for unit tests.
         *
         *
-        * @param file_name The name of the file to read from.
+        * @param FileName The name of the file to read from.
         * @return The contents of the file as a string.
         */
         public string FileRead(string FileName)
@@ -96,7 +96,7 @@ namespace CarMaintenanceLibrary {
         * @brief Appends given text to a binary file with a automatic calculated line number. Calcultes new lines line number by finding last lines line number.
         *
         *
-        * @param file_name The name of the file to append to.
+        * @param FileName The name of the file to append to.
         * @param text The text to append to the file.
         * @return 0 on success.
         */
@@ -153,7 +153,7 @@ namespace CarMaintenanceLibrary {
         * @brief This function Opens a binary file, finds the line that user wants to edit and replace it wih new text.
         *
         *
-        * @param file_name The name of the file to edit.
+        * @param FileName The name of the file to edit.
         * @param line_number_to_edit The line number to edit.
         * @param new_line The new text to replace the existing line.
         * @return 0 on success.
@@ -226,7 +226,7 @@ namespace CarMaintenanceLibrary {
         * @brief This function Opens a binary file, deletes the line user wanted and make adjustments on line number acordingly.
         *
         *
-        * @param file_name The name of the file to delete the line from.
+        * @param FileName The name of the file to delete the line from.
         * @param line_number_to_delete The line number to delete.
         * @return 0 on success.
         */
