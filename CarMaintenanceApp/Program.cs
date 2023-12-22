@@ -43,6 +43,7 @@ class Program
                                 Console.WriteLine("-------------------------------------------------------");
                                 reminder_count++;
                             }
+                            
 
 
                             Console.WriteLine("\n----------Main Menu----------");
@@ -58,6 +59,14 @@ class Program
                             switch (main_menu)
                             {
                                 case 1:
+                                    string? vehicleModel;
+                                    int serviceKm;
+                                    string? serviceProvider;
+                                    int serviceCost;
+                                    int lineNumberToEdit;
+                                    int lineNumberToDelete;
+
+
                                     Console.WriteLine("\n----------Service History Tracking----------");
                                     Console.WriteLine("1-)Show Service History Record");
                                     Console.WriteLine("2-)Register Service History Record");
@@ -76,17 +85,72 @@ class Program
                                     }
                                     else if (service_menu == 2)
                                     {
-                                        car.RegisterServiceHistoryRecord();
+                                        Console.Write("What is the model of vehicle? ");
+                                        vehicleModel = Console.ReadLine();
+
+                                        Console.Write("What is the service KM? ");
+                                        if (!int.TryParse(Console.ReadLine(), out serviceKm))
+                                        {
+                                            Console.WriteLine("Please use an integer.");
+                                            continue;
+                                        }
+
+                                        Console.Write("Who is the service provider? ");
+                                        serviceProvider = Console.ReadLine();
+
+                                        Console.Write("What is the service cost? ");
+                                        if (!int.TryParse(Console.ReadLine(), out serviceCost))
+                                        {
+                                            Console.WriteLine("Please use an integer.");
+                                            continue;
+                                        }
+
+                                        car.RegisterServiceHistoryRecord(vehicleModel,serviceKm,serviceProvider,serviceCost);
                                         continue;
                                     }
                                     else if (service_menu == 3)
                                     {
-                                        car.EditServiceHistoryRecord();
+
+                                        Console.Write("Which line do you want to edit? ");
+                                        if (!int.TryParse(Console.ReadLine(), out lineNumberToEdit))
+                                        {
+                                            Console.WriteLine("Please use an integer.");
+                                            continue;
+                                        }
+
+                                        Console.Write("What is the model of vehicle? ");
+                                        vehicleModel = Console.ReadLine();
+
+                                        Console.Write("What is the service KM? ");
+                                        if (!int.TryParse(Console.ReadLine(), out serviceKm))
+                                        {
+                                            Console.WriteLine("Please use an integer.");
+                                            continue;
+                                        }
+
+                                        Console.Write("Who is the service provider? ");
+                                        serviceProvider = Console.ReadLine();
+
+                                        Console.Write("What is the service cost? ");
+                                        if (!int.TryParse(Console.ReadLine(), out serviceCost))
+                                        {
+                                            Console.WriteLine("Please use an integer.");
+                                            continue;
+                                        }
+
+                                        car.EditServiceHistoryRecord(lineNumberToEdit,vehicleModel,serviceKm,serviceProvider,serviceCost);
                                         continue;
                                     }
                                     else if (service_menu == 4)
                                     {
-                                        car.DeleteServiceHistoryRecord();
+                                        Console.Write("Which line do you want to delete? ");
+                                        if (!int.TryParse(Console.ReadLine(), out lineNumberToDelete))
+                                        {
+                                            Console.WriteLine("Please use an integer.");
+                                            continue;
+                                        }
+
+                                        car.DeleteServiceHistoryRecord(lineNumberToDelete);
                                         continue;
                                     }
                                     else if (service_menu == 5)
@@ -99,6 +163,8 @@ class Program
                                     }
 
                                 case 2:
+                                    string? ServiceType;
+
                                     Console.WriteLine("\n----------Maintenance Reminder Records----------");
                                     Console.WriteLine("1-)Show Maintenance Reminder Records");
                                     Console.WriteLine("2-)Register Maintenance Reminder Records");
@@ -117,17 +183,55 @@ class Program
                                     }
                                     else if (maintenance_reminder_menu == 2)
                                     {
-                                        car.RegisterMaintenanceReminderRecord();
+                                        Console.Write("What is the model of vehicle? ");
+                                        vehicleModel = Console.ReadLine();
+
+                                        Console.Write("What is the service KM? ");
+                                        if (!int.TryParse(Console.ReadLine(), out serviceKm))
+                                        {
+                                            Console.WriteLine("Please use an integer");
+                                            continue;
+                                        }
+
+                                        Console.Write("Who is the planned service type? ");
+                                        ServiceType = Console.ReadLine();
+
+                                        car.RegisterMaintenanceReminderRecord(vehicleModel, serviceKm, ServiceType);
                                         continue;
                                     }
                                     else if (maintenance_reminder_menu == 3)
                                     {
-                                        car.EditMaintenanceReminderRecord();
+                                        Console.WriteLine("Which do you want to edit");
+                                        if (!int.TryParse(Console.ReadLine(), out lineNumberToEdit))
+                                        {
+                                            Console.WriteLine("Please use an integer");
+                                            continue;
+                                        }
+
+                                        Console.Write("What is the model of vehicle? ");
+                                        vehicleModel = Console.ReadLine();
+
+                                        Console.Write("What is the service KM? ");
+                                        if (!int.TryParse(Console.ReadLine(), out serviceKm))
+                                        {
+                                            Console.WriteLine("Please use an integer");
+                                            continue;
+                                        }
+
+                                        Console.Write("Who is the planned service type? ");
+                                        ServiceType = Console.ReadLine();
+                                        car.EditMaintenanceReminderRecord(lineNumberToEdit, vehicleModel, serviceKm, ServiceType);
                                         continue;
                                     }
                                     else if (maintenance_reminder_menu == 4)
                                     {
-                                        car.DeleteMaintenanceReminderRecord();
+                                        Console.Write("Which line do you want to delete? ");
+                                        if (!int.TryParse(Console.ReadLine(), out lineNumberToDelete))
+                                        {
+                                            Console.WriteLine("Please use an integer.");
+                                            continue;
+                                        }
+                                        car.DeleteMaintenanceReminderRecord(lineNumberToDelete);
                                         continue;
                                     }
                                     else if (maintenance_reminder_menu == 5)
@@ -140,6 +244,13 @@ class Program
                                     }
 
                                 case 3:
+                                    
+                                    string? carModel;
+                                    string? expenseType;
+                                    string? expenseDate;
+                                    int expense;
+                                    
+
                                     Console.WriteLine("\n----------Expense Tracking Records----------");
                                     Console.WriteLine("1-)Show Expense Tracking Records");
                                     Console.WriteLine("2-)Register Expense Tracking Records");
@@ -158,17 +269,56 @@ class Program
                                     }
                                     else if (expense_menu == 2)
                                     {
-                                        car.RegisterExpenseRecord();
+                                        Console.WriteLine("What is the model of the car?");
+                                        carModel = Console.ReadLine();
+                                        Console.WriteLine("What is the expense date?");
+                                        expenseDate = Console.ReadLine();
+                                        Console.WriteLine("What is the expense type?");
+                                        expenseType = Console.ReadLine();
+                                        Console.WriteLine("How much is the expense?");
+                                        if (!int.TryParse(Console.ReadLine(), out expense))
+                                        {
+                                            Console.WriteLine("Please use an integer");
+                                            continue;
+                                        }
+
+                                        car.RegisterExpenseRecord(carModel, expenseDate, expenseType, expense);
                                         continue;
                                     }
                                     else if (expense_menu == 3)
                                     {
-                                        car.EditExpenseRecord();
+                                        Console.WriteLine("Which do you want to edit");
+                                        if (!int.TryParse(Console.ReadLine(), out lineNumberToEdit))
+                                        {
+                                            Console.WriteLine("Please use an integer");
+                                            continue;
+                                        }
+                                        Console.WriteLine("What is the model of the car?");
+                                        carModel = Console.ReadLine();
+                                        Console.WriteLine("What is the expense date?");
+                                        expenseDate = Console.ReadLine();
+                                        Console.WriteLine("What is the expenseType");
+                                        expenseType = Console.ReadLine();
+                                        Console.WriteLine("How much is the expense?");
+                                        if (!int.TryParse(Console.ReadLine(), out expense))
+                                        {
+                                            Console.WriteLine("Please use an integer");
+                                            continue;
+                                        }
+
+                                        car.EditExpenseRecord(lineNumberToEdit, carModel, expenseDate, expenseType, expense);
                                         continue;
                                     }
                                     else if (expense_menu == 4)
                                     {
-                                        car.DeleteExpenseRecord();
+                                        Console.Write("Which line do you want to delete? ");
+                                        if (!int.TryParse(Console.ReadLine(), out lineNumberToDelete))
+                                        {
+                                            Console.WriteLine("Please use an integer.");
+                                            continue;
+                                        }
+
+                                        car.DeleteExpenseRecord(lineNumberToDelete);
                                         continue;
                                     }
                                     else if (expense_menu == 5)
@@ -181,6 +331,9 @@ class Program
                                     }
 
                                 case 4:
+                                    float fuelConsumed;
+                                    float roadTraveled;
+
                                     Console.WriteLine("\n----------Fuel Efficiency Records----------");
                                     Console.WriteLine("1-)Show Fuel Efficiency Records");
                                     Console.WriteLine("2-)Register Fuel Efficiency Records");
@@ -199,17 +352,60 @@ class Program
                                     }
                                     else if (fuel_efficiency_menu == 2)
                                     {
-                                        car.RegisterFuelEfficiencyRecord();
+                                        Console.WriteLine("What is the model of the car?");
+                                        carModel = Console.ReadLine();
+
+                                        if (!float.TryParse(Console.ReadLine(), out fuelConsumed))
+                                        {
+                                            Console.WriteLine("Please use an integer");
+                                            continue;
+                                        }
+
+                                        if (!float.TryParse(Console.ReadLine(), out roadTraveled))
+                                        {
+                                            Console.WriteLine("Please use an integer");
+                                            continue;
+                                        }
+                                        car.RegisterFuelEfficiencyRecord(carModel, fuelConsumed, roadTraveled);
                                         continue;
                                     }
                                     else if (fuel_efficiency_menu == 3)
                                     {
-                                        car.EditFuelEfficiencyRecord();
+                                        Console.WriteLine("Which do you want to edit?");
+                                        if (!int.TryParse(Console.ReadLine(), out lineNumberToEdit))
+                                        {
+                                            Console.WriteLine("Please use an integer");
+                                            continue;
+                                        }
+
+                                        Console.WriteLine("What is the model of the car?");
+                                        carModel = Console.ReadLine();
+                                        Console.WriteLine("What is the fuel consumed");
+
+                                        if (!float.TryParse(Console.ReadLine(), out fuelConsumed))
+                                        {
+                                            Console.WriteLine("Please use a float");
+                                            continue;
+                                        }
+
+                                        Console.WriteLine("What is the road traveled");
+                                        if (!float.TryParse(Console.ReadLine(), out roadTraveled))
+                                        {
+                                            Console.WriteLine("Please use a float");
+                                           continue;
+                                        }
+                                        car.EditFuelEfficiencyRecord(lineNumberToEdit, carModel, fuelConsumed, roadTraveled);
                                         continue;
                                     }
                                     else if (fuel_efficiency_menu == 4)
                                     {
-                                        car.DeleteFuelEfficiencyRecord();
+                                        Console.Write("Which line do you want to delete? ");
+                                        if (!int.TryParse(Console.ReadLine(), out lineNumberToDelete))
+                                        {
+                                            Console.WriteLine("Please use an integer.");
+                                            continue;
+                                        }
+                                        car.DeleteFuelEfficiencyRecord(lineNumberToDelete);
                                         continue;
                                     }
                                     else if (fuel_efficiency_menu == 5)
