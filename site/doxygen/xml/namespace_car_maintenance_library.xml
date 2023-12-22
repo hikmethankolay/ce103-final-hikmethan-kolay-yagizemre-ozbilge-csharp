@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespace_car_maintenance_library" kind="namespace" language="C#">
+    <compoundname>CarMaintenanceLibrary</compoundname>
+    <innerclass refid="class_car_maintenance_library_1_1_car_maintenance" prot="public">CarMaintenanceLibrary::CarMaintenance</innerclass>
+    <briefdescription>
+<para>Namespace <ref refid="namespace_car_maintenance_library" kindref="compound">CarMaintenanceLibrary</ref> for Functions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="CarMaintenanceLibrary/CarMaintenance.cs" line="18" column="1"/>
+  </compounddef>
+</doxygen>

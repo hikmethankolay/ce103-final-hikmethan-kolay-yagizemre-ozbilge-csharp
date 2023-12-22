@@ -1,9 +1,36 @@
-﻿using CarMaintenanceLibrary;
+﻿/**
+ * @file Program.cs
+ *
+ * @brief Main app source code
+ */
+
+/**
+* @brief Necessary namespaces for main app.
+*
+*/
+using CarMaintenanceLibrary;
+/**
+* @brief Necessary namespaces for main app.
+*
+*/
 using System;
+/**
+* @brief Necessary namespaces for main app.
+*
+*/
 using System.IO;
+
 #pragma warning disable CS8604 // Possible null reference argument.
+/**
+* @brief Main apps Class
+*
+*/
 class Program
 {
+    /**
+    * @brief Main app fucntion
+    *
+    */
     static int Main()
     {
         int login_menu;
@@ -14,6 +41,12 @@ class Program
         int fuel_efficiency_menu;
         int reminder_count = 0;
         bool run = true;
+        string? newUsername;
+        string? newPassword;
+        string? newRecoveryKey;
+        string? choice;
+        string? username;
+        string? password;
 
         do
         {
@@ -30,7 +63,12 @@ class Program
             {
                 
                 case 1:
-                    if (car.UserLogin() == 0)
+                    Console.WriteLine("Please enter username:");
+                    username = Console.ReadLine();
+                    Console.WriteLine("Please enter password:");
+                    password = Console.ReadLine();
+
+                    if (car.UserLogin(username, password) == 0)
                     {
                         bool run_2 = true;
 
@@ -434,11 +472,33 @@ class Program
                     break;
 
                 case 2:
-                    car.UserRegister();
-                    continue;
 
+                    Console.Write("Do you understand that if you create a new account all the records that have been saved so far will be deleted?[Y/N]: ");
+                    choice = Console.ReadLine();
+                    if (choice == "Y")
+                    {
+                        Console.WriteLine("Please enter a new username: ");
+                        newUsername = Console.ReadLine();
+                        Console.WriteLine("Please enter a new password: ");
+                        newPassword = Console.ReadLine();
+                        Console.WriteLine("\nWARNING!!!\nYou will use this to change password if needed, if you lost this you can't access logs without them being completely deleted\nWARNING!!!\n");
+                        Console.WriteLine("Please enter a new recovery key: ");
+                        newRecoveryKey = Console.ReadLine();
+                        car.UserRegister(newUsername, newPassword, newRecoveryKey);
+                    }
+
+                    continue;
                 case 3:
-                    car.UserChangePassword();
+                    string? recoveryKey;
+                    string? ChangedPassword;
+
+                    Console.Write("Please enter your recovery key: ");
+                    recoveryKey = Console.ReadLine();
+
+                    Console.Write("Please enter a new password: ");
+                    ChangedPassword = Console.ReadLine();
+
+                    car.UserChangePassword(recoveryKey, ChangedPassword);
                     continue;
 
                 case 4:

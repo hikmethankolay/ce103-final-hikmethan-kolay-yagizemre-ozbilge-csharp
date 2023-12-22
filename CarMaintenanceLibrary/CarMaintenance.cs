@@ -5,19 +5,21 @@
  */
 
 /**
+* 
+*@brief Imports Text Class from System Namespace for file operations.
+*
+*/
+using System.Text;
+
+/**
 * @brief Namespace CarMaintenanceLibrary for Functions.
 *
 */
 namespace CarMaintenanceLibrary {
-    /**
-    * 
-    *@brief Imports Text Class from System Namespace for file operations.
-    *
-    */
-    using System.Text;
+
 
     /**
-    * Class CarMaintenance for Functions
+    * @brief Class CarMaintenance for Functions
     *
     */
     public class CarMaintenance
@@ -314,50 +316,25 @@ namespace CarMaintenanceLibrary {
         * @return 0 on success.
         * @return -1 on faill.
         */
-        public int UserRegister(string? newUsername = "None", string? newPassword = "None", string? newRecoveryKey = "None", string userFile = "user.bin", string? choice = "None")
+        public int UserRegister(string? newUsername, string? newPassword, string? newRecoveryKey, string userFile = "user.bin")
         {
             string loginInfo;
+            loginInfo = $"{newUsername}/{newPassword}/{newRecoveryKey}";
 
-            if (choice == "None")
+            using (myFile = new FileStream(userFile, FileMode.Create, FileAccess.Write))
             {
-                Console.Write("Do you understand that if you create a new account all the records that have been saved so far will be deleted?[Y/N]: ");
-                choice = Console.ReadLine();
-            }
-
-            if (choice == "Y")
-            {
-                if (newUsername == "None" && newPassword == "None" && newRecoveryKey == "None")
+                using (StreamWriter streamWriter = new StreamWriter(myFile))
                 {
-                    Console.WriteLine("Please enter a new username: ");
-                    newUsername = Console.ReadLine();
-                    Console.WriteLine("Please enter a new password: ");
-                    newPassword = Console.ReadLine();
-                    Console.WriteLine("\nWARNING!!!\nYou will use this to change password if needed, if you lost this you can't access logs without them being completely deleted\nWARNING!!!\n");
-                    Console.WriteLine("Please enter a new recovery key: ");
-                    newRecoveryKey = Console.ReadLine();
+                    streamWriter.Write(loginInfo);
                 }
-
-                loginInfo = $"{newUsername}/{newPassword}/{newRecoveryKey}";
-            
-                using (myFile = new FileStream(userFile, FileMode.Create, FileAccess.Write))
-                {
-                    using (StreamWriter streamWriter = new StreamWriter(myFile))
-                    {
-                        streamWriter.Write(loginInfo);
-                    }
-                }
-
-                File.Delete("service_history_records.bin");
-                File.Delete("maintenance_reminder_records.bin");
-                File.Delete("expense_records.bin");
-                File.Delete("fuel_efficiency_records.bin");
-
-                return 0;
             }
-            else
-            {
-                return -1;
-            }
+
+            File.Delete("service_history_records.bin");
+            File.Delete("maintenance_reminder_records.bin");
+            File.Delete("expense_records.bin");
+            File.Delete("fuel_efficiency_records.bin");
+
+            return 0;
         }
 
         /**
@@ -368,7 +345,7 @@ namespace CarMaintenanceLibrary {
          * @return 0 on success.
          * @return -1 on fail.
          */
-        public int UserLogin(string? username = "None", string? password = "None", string? userFile = "user.bin")
+        public int UserLogin(string? username, string? password, string? userFile = "user.bin")
         {
             string usernameRead = "";
             string passwordRead = "";
@@ -408,14 +385,6 @@ namespace CarMaintenanceLibrary {
                 }
             }
 
-            if (username == "None" && password == "None")
-            {
-                Console.WriteLine("Please enter username:");
-                username = Console.ReadLine();
-                Console.WriteLine("Please enter password:");
-                password = Console.ReadLine();
-            }
-
             if (username == usernameRead && password == passwordRead)
             {
                 Console.WriteLine("Login Succesfull");
@@ -436,7 +405,7 @@ namespace CarMaintenanceLibrary {
          * @return 0 on success.
          * @return -1 on fail.
          */
-        public int UserChangePassword(string? recoveryKey = "None", string? newPassword = "None", string? userFile = "user.bin")
+        public int UserChangePassword(string? recoveryKey, string? newPassword, string? userFile = "user.bin")
         {
             string usernameRead = "";
             string recoveryKeyRead = "";
@@ -478,21 +447,9 @@ namespace CarMaintenanceLibrary {
                 }
             }
 
-            if (recoveryKey == "None")
-            {
-                Console.Write("Please enter your recovery key: ");
-                recoveryKey = Console.ReadLine();
-            }
-
             if (recoveryKeyRead == recoveryKey)
             {
                 Console.WriteLine("Recovery Key Approved");
-
-                if (newPassword == "None")
-                {
-                    Console.Write("Please enter a new password: ");
-                    newPassword = Console.ReadLine();
-                }
 
                 newLoginInfo = $"{usernameRead}/{newPassword}/{recoveryKeyRead}";
 
@@ -767,16 +724,6 @@ namespace CarMaintenanceLibrary {
         */
         public int DeleteFuelEfficiencyRecord(int lineNumberToDelete,string fileName = "fuel_efficiency_records.bin")
         {
-          if(lineNumberToDelete ==0)
-          {
-             Console.WriteLine("Which do you want to delete?");
-            if(!int.TryParse(Console.ReadLine(),out  lineNumberToDelete))
-            {
-              Console.WriteLine("Please use an integer");
-              return -1;
-            }
-          }
-
           if (FileLineDelete(fileName, lineNumberToDelete) == 0)
           {
               return 0;

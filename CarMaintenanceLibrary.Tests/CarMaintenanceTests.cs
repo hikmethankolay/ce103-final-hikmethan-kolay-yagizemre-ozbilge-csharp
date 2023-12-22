@@ -106,15 +106,8 @@ namespace CarMaintenanceLibrary.Tests
         {
             CarMaintenance car = new CarMaintenance();
             testString = "username/password/recoverykey";
-            car.UserRegister("username", "password", "recoverykey", "usertest.bin", "Y");
+            car.UserRegister("username", "password", "recoverykey", "usertest.bin");
             Assert.Equal(testString, car.FileRead("usertest.bin"));
-        }
-
-        [Fact]
-        public void TestUserRegisterFail()
-        {
-            CarMaintenance car = new CarMaintenance();
-            Assert.Equal(fail, car.UserRegister("username", "password", "recoverykey", "usertest.bin", "N"));
         }
 
         [Fact]
