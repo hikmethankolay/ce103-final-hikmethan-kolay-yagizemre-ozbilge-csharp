@@ -1,30 +1,29 @@
 ﻿using CarMaintenanceLibrary;
 using System;
 using System.IO;
-
+#pragma warning disable CS8604 // Possible null reference argument.
 class Program
 {
-
-    static void Main()
+    static int Main()
     {
+        int login_menu;
+        int main_menu;
+        int service_menu;
+        int maintenance_reminder_menu;
+        int expense_menu;
+        int fuel_efficiency_menu;
+        int reminder_count = 0;
         bool run = true;
 
         do
         {
-            int login_menu;
-            int main_menu;
-            int service_menu;
-            int maintenance_reminder_menu;
-            int expense_menu;
-            int fuel_efficiency_menu;
-            int reminder_count = 0;
-
             Console.WriteLine("----------Login----------");
             Console.WriteLine("1-)Login");
             Console.WriteLine("2-)Register");
             Console.WriteLine("3-)Change Password");
             Console.WriteLine("4-)Exit");
             Console.Write("Make a choice(1-4): ");
+
             login_menu = int.Parse(Console.ReadLine());
             CarMaintenance car = new CarMaintenance();
             switch (login_menu)
@@ -54,6 +53,7 @@ class Program
                             Console.WriteLine("5-)Back to login menu");
                             Console.Write("Make a choice(1-5): ");
                             main_menu = int.Parse(Console.ReadLine());
+
 
                             switch (main_menu)
                             {
@@ -254,6 +254,6 @@ class Program
             }
         } while (run);
 
-        Console.ReadLine();
+        return 0;
     }
 }
