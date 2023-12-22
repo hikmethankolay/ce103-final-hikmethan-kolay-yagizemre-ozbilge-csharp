@@ -153,9 +153,9 @@ namespace CarMaintenanceLibrary {
         * @brief This function Opens a binary file, finds the line that user wants to edit and replace it wih new text.
         *
         *
-        * @param FileName The name of the file to edit.
-        * @param line_number_to_edit The line number to edit.
-        * @param new_line The new text to replace the existing line.
+        * @param fileName The name of the file to edit.
+        * @param lineNumberToEdit The line number to edit.
+        * @param newLine The new text to replace the existing line.
         * @return 0 on success.
         */
         public int FileEdit(string fileName, int lineNumberToEdit, string newLine)
@@ -226,8 +226,8 @@ namespace CarMaintenanceLibrary {
         * @brief This function Opens a binary file, deletes the line user wanted and make adjustments on line number acordingly.
         *
         *
-        * @param FileName The name of the file to delete the line from.
-        * @param line_number_to_delete The line number to delete.
+        * @param fileName The name of the file to delete the line from.
+        * @param LineNumberToDelete The line number to delete.
         * @return 0 on success.
         */
         public int FileLineDelete(string fileName, int LineNumberToDelete)

@@ -657,7 +657,7 @@ Public Member Functions</h2></td></tr>
 <p>Appends given text to a binary file with a automatic calculated line number. Calcultes new lines line number by finding last lines line number. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>The name of the file to append to. </td></tr>
+    <tr><td class="paramname">FileName</td><td>The name of the file to append to. </td></tr>
     <tr><td class="paramname">text</td><td>The text to append to the file. </td></tr>
   </table>
   </dd>
@@ -753,9 +753,9 @@ Public Member Functions</h2></td></tr>
 <p>This function Opens a binary file, finds the line that user wants to edit and replace it wih new text. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>The name of the file to edit. </td></tr>
-    <tr><td class="paramname">line_number_to_edit</td><td>The line number to edit. </td></tr>
-    <tr><td class="paramname">new_line</td><td>The new text to replace the existing line. </td></tr>
+    <tr><td class="paramname">fileName</td><td>The name of the file to edit. </td></tr>
+    <tr><td class="paramname">lineNumberToEdit</td><td>The line number to edit. </td></tr>
+    <tr><td class="paramname">newLine</td><td>The new text to replace the existing line. </td></tr>
   </table>
   </dd>
 </dl>
@@ -858,8 +858,8 @@ Public Member Functions</h2></td></tr>
 <p>This function Opens a binary file, deletes the line user wanted and make adjustments on line number acordingly. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>The name of the file to delete the line from. </td></tr>
-    <tr><td class="paramname">line_number_to_delete</td><td>The line number to delete. </td></tr>
+    <tr><td class="paramname">fileName</td><td>The name of the file to delete the line from. </td></tr>
+    <tr><td class="paramname">LineNumberToDelete</td><td>The line number to delete. </td></tr>
   </table>
   </dd>
 </dl>
@@ -967,7 +967,7 @@ Public Member Functions</h2></td></tr>
 <p>Opens a binary file, Reads all of its content, seperate line with "\n" and write them to console, also returns a string for unit tests. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>The name of the file to read from. </td></tr>
+    <tr><td class="paramname">FileName</td><td>The name of the file to read from. </td></tr>
   </table>
   </dd>
 </dl>
@@ -1039,7 +1039,7 @@ Public Member Functions</h2></td></tr>
 <p>Opens a binary file, deletes all of its content, and writes given text to it.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">file_name</td><td>The name of the file to write. </td></tr>
+    <tr><td class="paramname">FileName</td><td>The name of the file to write. </td></tr>
     <tr><td class="paramname">text</td><td>The text to write. </td></tr>
   </table>
   </dd>

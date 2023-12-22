@@ -40,7 +40,7 @@
 <para>Opens a binary file, deletes all of its content, and writes given text to it.</para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>file_name</parametername>
+<parametername>FileName</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>The name of the file to write. </para>
@@ -83,7 +83,7 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>file_name</parametername>
+<parametername>FileName</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>The name of the file to read from. </para>
@@ -118,7 +118,7 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>file_name</parametername>
+<parametername>FileName</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>The name of the file to append to. </para>
@@ -169,7 +169,7 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>file_name</parametername>
+<parametername>fileName</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>The name of the file to edit. </para>
@@ -177,7 +177,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>line_number_to_edit</parametername>
+<parametername>lineNumberToEdit</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>The line number to edit. </para>
@@ -185,7 +185,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>new_line</parametername>
+<parametername>newLine</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>The new text to replace the existing line. </para>
@@ -224,7 +224,7 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>file_name</parametername>
+<parametername>fileName</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>The name of the file to delete the line from. </para>
@@ -232,7 +232,7 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>line_number_to_delete</parametername>
+<parametername>LineNumberToDelete</parametername>
 </parameternamelist>
 <parameterdescription>
 <para>The line number to delete. </para>
